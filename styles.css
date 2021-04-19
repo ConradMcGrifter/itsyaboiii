@@ -4,6 +4,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -62,10 +63,11 @@ a {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 125px auto 125px;
+    grid-template-rows: 125px auto 50px 125px;
     grid-template-areas:
         "h h h h h h h h h h h h"
         "c c c c c c c c c c c c"
+        "s s s s s s s s s s s s "
         "f f f f f f f f f f f f";
     color: white;
     height: 100vh;
@@ -203,4 +205,35 @@ blockquote {
     to {
         opacity: 1;
     }
+}
+
+.small-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(33, 33, 33, 0.5);
+    grid-area: s;
+}
+
+.small-footer a {
+    color: #3282a1;
+}
+
+i {
+    color: white;
+    transform: scale(200%);
+}
+
+.footer {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 200px;
 }
