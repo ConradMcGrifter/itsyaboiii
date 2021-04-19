@@ -22,6 +22,14 @@ body {
     letter-spacing: 0.05em;
 }
 
+h3 {
+    margin: 0 0 2em 0;
+    font-weight: 400;
+    font-size: 1.8rem;
+
+    color: lightgoldenrodyellow;
+}
+
 header img {
     width: 100px;
     height: 100px;
@@ -111,6 +119,7 @@ a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    position: relative;
 }
 
 /* .recent-post__h1 {
@@ -127,7 +136,7 @@ a:hover {
     z-index: 0;
 } */
 
-.recent-posts {
+.post-container {
     /* outline: solid blue 3px; */
     width: 100%;
     padding: 1em;
@@ -165,10 +174,10 @@ a:hover {
 .newest-post__h2,
 .card-preview__h2 {
     font-size: 4rem;
-    margin: 0 0 1em 0;
+    margin: 0 0 0.5em 0;
 }
 
-.recent-posts p {
+.post-container p {
     line-height: 1.6;
     font-size: 2.2rem;
 }
