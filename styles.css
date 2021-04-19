@@ -156,8 +156,7 @@ header {
     margin: 0 0 1em 0;
 }
 
-.newest-post__p,
-.card-preview__p {
+.recent-posts p {
     line-height: 1.6;
     font-size: 2.2rem;
 }
@@ -166,4 +165,18 @@ header {
     grid-area: f;
 
     background: rgba(33, 33, 33, 0.5);
+}
+
+.newest-post__hidden-p {
+    display: none;
+}
+
+.newest-post__hidden-p.show {
+    display: block;
+}
+
+#newest-post__button {
+    cursor: pointer;
+    color: #3282a1;
+    text-align: center;
 }
