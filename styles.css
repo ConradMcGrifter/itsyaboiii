@@ -33,6 +33,10 @@ header {
     align-items: center;
 }
 
+a {
+    text-decoration: none;
+}
+
 .navbar {
     display: flex;
     width: 100%;
@@ -161,17 +165,24 @@ header {
     font-size: 2.2rem;
 }
 
+blockquote {
+    line-height: 1.4;
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.582);
+    padding: 1em;
+}
+
 .grid-item-3 {
     grid-area: f;
 
     background: rgba(33, 33, 33, 0.5);
 }
 
-.newest-post__hidden-p {
+.newest-post__hidden {
     display: none;
 }
 
-.newest-post__hidden-p.show {
+.newest-post__hidden.show {
     display: block;
 }
 
@@ -179,4 +190,17 @@ header {
     cursor: pointer;
     color: #3282a1;
     text-align: center;
+}
+
+#newest-post__button a {
+    color: #3282a1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
