@@ -36,6 +36,12 @@ header {
 
 a {
     text-decoration: none;
+    color: #3282a1;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: whitesmoke;
 }
 
 .navbar {
@@ -56,7 +62,7 @@ a {
     width: 50%;
     justify-content: space-around;
     margin: 0.25em;
-
+    padding: 0;
     list-style-type: none;
 }
 
@@ -190,12 +196,8 @@ blockquote {
 
 #newest-post__button {
     cursor: pointer;
-    color: #3282a1;
-    text-align: center;
-}
 
-#newest-post__button a {
-    color: #3282a1;
+    text-align: center;
 }
 
 @keyframes fadeIn {
@@ -215,13 +217,15 @@ blockquote {
     grid-area: s;
 }
 
-.small-footer a {
-    color: #3282a1;
-}
-
 i {
     color: white;
     transform: scale(200%);
+    transition: 0.25s;
+}
+
+i:hover {
+    transform: scale(230%);
+    color: #3282a1;
 }
 
 .footer {
@@ -235,5 +239,5 @@ i {
     align-items: center;
     justify-content: space-around;
     height: 100%;
-    width: 200px;
+    width: 225px;
 }
