@@ -126,6 +126,14 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.582);
 }
 
+#sticky-navbar {
+    display: flex;
+}
+
+#navbar {
+    display:none;
+}
+
 #hamburger {
     display: none;
 }
@@ -302,11 +310,21 @@ i:hover {
         transition:.25s;
     }
 
+    #sticky-navbar {
+        display: none;
+    }
+    
+    #navbar {
+        display:flex;
+    }
+
 
     .navbar__ul.reveal {
         display:flex;
         flex-direction: column;
         justify-content: space-evenly;
+        margin-right:1.5em;
+       text-align: center;
         
        
     }
