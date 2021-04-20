@@ -151,7 +151,7 @@ header {
 .card-preview {
     /* outline: solid rgba(75, 75, 70, 0.596) 3px; */
     max-width: 75ch;
-    padding: 2em;
+    padding: 3em 4em;
     background: rgba(33, 33, 33);
     border-radius: 5px;
 
@@ -165,7 +165,7 @@ header {
 
 .newest-post iframe,
 .card-preview iframe {
-    width: 95%;
+    width: 100%;
 }
 
 .newest-post__h2,
@@ -246,12 +246,15 @@ i {
     color: white;
     /* transform: scale(200%); */
     transition: 0.25s;
+    
 }
 
 i:hover {
     /* transform: scale(230%); */
     color: #3282a1;
 }
+
+
 
 .footer {
     align-items: center;
