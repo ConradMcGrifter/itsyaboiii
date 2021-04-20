@@ -10,8 +10,9 @@ function showArticle() {
 
     if (hidden.classList.contains("show")) {
         readMore.style.display = "none";
-        hidden.style.animation = "fadeIn 1s";
         backToTop.style.display = "flex";
+        hidden.style.animation = "fadeIn 1s";
+        
     }
 }
 
