@@ -270,16 +270,16 @@ i:hover {
 #backToTop {
     display: none;
     cursor: pointer;
-    /* border: solid #3282a1 2px; */
+    
     text-align: center;
-    padding: 0.5em;
+    padding: 0.25em;
     border-radius: 999px;
     text-decoration: none;
     color: #3282a1;
     transition: 0.25s;
     
     justify-content: center;
-    width: 100%;
+    width: 19%;
     margin: auto;
 }
 
