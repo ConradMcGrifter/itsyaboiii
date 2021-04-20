@@ -11,7 +11,7 @@ function showArticle() {
     if (hidden.classList.contains("show")) {
         readMore.style.display = "none";
         hidden.style.animation = "fadeIn 1s";
-        backToTop.style.display = "block";
+        backToTop.style.display = "flex";
     }
 }
 
@@ -20,6 +20,6 @@ function closeArticle() {
         hidden.classList.toggle("show");
     }
     backToTop.style.display = "none";
-    readMore.style.display = "block";
+    readMore.style.display = "flex";
     document.getElementById("header").scrollIntoView();
 }
