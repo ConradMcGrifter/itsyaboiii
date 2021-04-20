@@ -26,6 +26,10 @@ a {
     color: #3282a1;
 }
 
+p {
+    text-indent: 2.3em;
+}
+
 h3 {
     margin: 0 0 2em 0;
     font-weight: 400;
@@ -173,7 +177,7 @@ header {
 
 .post-container p {
     line-height: 1.6;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 blockquote {
@@ -226,7 +230,7 @@ blockquote {
 .small-footer {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     background: rgba(33, 33, 33, 0.5);
     grid-area: s;
 }
