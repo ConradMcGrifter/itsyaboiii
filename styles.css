@@ -156,6 +156,8 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* this makes the main content fade in on page load */
+    animation: fadeIn 0.75s;
 }
 
 .newest-post {
