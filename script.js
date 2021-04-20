@@ -1,9 +1,15 @@
-const readMore = document.getElementById("newest-post__button");
+
 const hidden = document.getElementById("hidden");
+const readMore = document.getElementById("newest-post__button");
 const backToTop = document.getElementById("backToTop");
+const hamburger = document.getElementById("hamburger");
+const navbar = document.getElementById("navbar");
+const navbarUl = document.getElementById("navbar__ul");
+const darken = document.getElementById("darken");
 
 readMore.addEventListener("click", showArticle);
 backToTop.addEventListener("click", closeArticle);
+hamburger.addEventListener("click", sidebar);
 
 function showArticle() {
     hidden.classList.toggle("show");
@@ -23,4 +29,13 @@ function closeArticle() {
     backToTop.style.display = "none";
     readMore.style.display = "flex";
     document.getElementById("header").scrollIntoView();
+}
+
+
+function sidebar() {
+hamburger.classList.toggle("reveal");
+navbar.classList.toggle("reveal");
+navbarUl.classList.toggle("reveal");
+darken.classList.toggle("darken");
+
 }

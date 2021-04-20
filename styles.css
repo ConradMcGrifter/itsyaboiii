@@ -83,13 +83,13 @@ header {
 .header {
     display: flex;
     justify-content: center;
-    background: rgb(7, 7, 7);
+    background: rgb(4, 4,4);
 }
 
 .header__logo {
     height: 100%;
     width: 100px;
-    background: rgb(7, 7, 7);
+    background: rgb(4, 4, 4);
 }
 
 .header__logo img {
@@ -292,23 +292,63 @@ i:hover {
         width: 50px;
         justify-content: center;
         background: #316579;
-        position: sticky;
+        position: fixed;
         top: 0;
         z-index: 999;
         color: lightgoldenrodyellow;
         padding: .1em;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.644);
         border-radius:0 2px 2px 0;
+        transition:.25s;
+    }
+
+
+    .navbar__ul.reveal {
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+       
     }
 
     .navbar__ul {
         display: none;
+        
     }
+
+    
+    .navbar.reveal {
+        /* this keeps the sidebar in place when revealed */
+        position: fixed;
+        /* left:-300px; */
+        width:300px;
+        height:100%;
+    }
+
+    #hamburger.reveal {
+        right: -200px;
+        height:50px;
+    }
+
 
     #hamburger {
         display: block;
+        position:relative;
         
-        
+        right:0; 
+    }
+
+    .darken {
+        background: rgba(0, 0, 0, 0.65);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        animation: fadeIn 0.5s;
+        height: 100%;
+        width: 100%;
     }
 
     .newest-post {
@@ -319,8 +359,8 @@ i:hover {
         margin: initial;
         width: 100%;
     }
-}
 
+}
 
 /* media queries for iphone 8 / 9 / 10  */
 @media only screen and (max-width: 414px) {
