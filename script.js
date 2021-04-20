@@ -10,6 +10,7 @@ const darken = document.getElementById("darken");
 readMore.addEventListener("click", showArticle);
 backToTop.addEventListener("click", closeArticle);
 hamburger.addEventListener("click", sidebar);
+darken.addEventListener("click", sidebar);
 
 function showArticle() {
     hidden.classList.toggle("show");
