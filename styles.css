@@ -328,13 +328,14 @@ i:hover {
     #hamburger.reveal {
         right: -200px;
         height:50px;
+        color:white;
     }
 
 
     #hamburger {
         display: block;
         position:relative;
-        
+        color:white;
         right:0; 
     }
 
