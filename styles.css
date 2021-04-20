@@ -233,12 +233,12 @@ blockquote {
 
 i {
     color: white;
-    transform: scale(200%);
+    /* transform: scale(200%); */
     transition: 0.25s;
 }
 
 i:hover {
-    transform: scale(230%);
+    /* transform: scale(230%); */
     color: #3282a1;
 }
 
