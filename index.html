@@ -21,6 +21,12 @@
         <nav class="navbar" id="navbar">
             <i class="fas fa-bars fa-2x" id="hamburger"></i>
             <ul class="navbar__ul" id="navbar__ul">
+                <li class="nav__li" id="modeToggle">
+                    <i
+                        class="fas fa-adjust fa-lg modeToggle"
+                        id="modeToggleMobile"
+                    ></i>
+                </li>
                 <li class="nav__li"><a href="pages/404.html">BLOG</a></li>
                 <li class="nav__li"><a href="pages/404.html">DROPS</a></li>
                 <li class="nav__li"><a href="pages/404.html">COLLECTION</a></li>
@@ -33,8 +39,8 @@
         <div class="grid-container">
             <!-- grid item 1 -->
             <header class="grid-item-1 header" id="header">
-                <div class="header__logo">
-                    <img src="images/iphone5noBG.png" alt="" id="logo" />
+                <div class="header__logo" id="logo">
+                    <img src="images/iphone5noBG.png" alt="" />
                 </div>
             </header>
 
@@ -43,6 +49,12 @@
                 <!-- desktop sticky nav bar -->
                 <nav class="navbar" id="sticky-navbar">
                     <ul class="navbar__ul" id="navbar__ul">
+                        <li class="nav__li">
+                            <i
+                                class="fas fa-adjust fa-lg modeToggle"
+                                id="modeToggleDesktop"
+                            ></i>
+                        </li>
                         <li class="nav__li">
                             <a href="pages/404.html">BLOG</a>
                         </li>

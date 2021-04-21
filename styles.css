@@ -151,6 +151,11 @@ header {
     list-style-type: none;
 }
 
+#modeToggleDesktop,
+#modeToggleMobile {
+    color: var(--clr-links);
+}
+
 .navbar__ul a {
     color: var(--clr-links);
     transition: 0.5s;

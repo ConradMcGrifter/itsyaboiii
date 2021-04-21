@@ -12,6 +12,8 @@ const header = document.getElementById("header");
 const content = document.getElementById("content");
 const newestPost = document.getElementById("newest-post");
 const footer = document.getElementById("footer");
+const toggleDesktop = document.getElementById("modeToggleDesktop");
+const toggleMobile = document.getElementById("modeToggleMobile");
 
 readMore.addEventListener("click", showArticle);
 backToTop.addEventListener("click", closeArticle);
@@ -88,7 +90,16 @@ if (lightMode === "enabled") {
     enableLightMode();
 }
 
-logo.addEventListener("click", () => {
+toggleDesktop.addEventListener("click", () => {
+    lightMode = localStorage.getItem("lightMode");
+    if (lightMode !== "enabled") {
+        enableLightMode();
+    } else {
+        disableLightMode();
+    }
+});
+
+toggleMobile.addEventListener("click", () => {
     lightMode = localStorage.getItem("lightMode");
     if (lightMode !== "enabled") {
         enableLightMode();
