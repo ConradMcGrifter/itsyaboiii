@@ -19,7 +19,6 @@ readMore.addEventListener("click", showArticle);
 backToTop.addEventListener("click", closeArticle);
 hamburger.addEventListener("click", sidebar);
 darken.addEventListener("click", sidebar);
-// logo.addEventListener("click", lightTheme);
 
 function showArticle() {
     hidden.classList.toggle("show");
@@ -51,15 +50,6 @@ function sidebar() {
         body.style.overflow = "";
     }
 }
-
-// function lightTheme() {
-//     body.classList.toggle("light-theme");
-//     stickyNavbar.classList.toggle("light-theme");
-//     content.classList.toggle("light-theme");
-//     header.classList.toggle("light-theme");
-//     newestPost.classList.toggle("light-theme");
-//     footer.classList.toggle("light-theme");
-// }
 
 // theme choice save
 
