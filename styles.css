@@ -416,4 +416,20 @@ i:hover {
     .header__logo {
         background: rgb(4, 4, 4);
     }
+
+    .header {
+        background: linear-gradient(
+                rgba(0, 0, 0, 0.712),
+                rgba(10, 10, 10, 0.877)
+            ),
+            url(images/carbonfiber.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .header__logo {
+        background: none;
+    }
 }
