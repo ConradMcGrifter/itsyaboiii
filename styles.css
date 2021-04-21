@@ -83,7 +83,7 @@ header {
 .header {
     display: flex;
     justify-content: center;
-    background: rgb(4, 4,4);
+    background: rgb(4, 4, 4);
 }
 
 .header__logo {
@@ -131,7 +131,7 @@ header {
 }
 
 #navbar {
-    display:none;
+    display: none;
 }
 
 #hamburger {
@@ -304,58 +304,53 @@ i:hover {
         top: 35px;
         z-index: 999;
         color: lightgoldenrodyellow;
-        padding: .1em;
+        padding: 0.1em;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.644);
-        border-radius:0 2px 2px 0;
-        transition:.25s;
+        border-radius: 0 2px 2px 0;
+        transition: 0.25s;
     }
 
     #sticky-navbar {
         display: none;
     }
-    
+
     #navbar {
-        display:flex;
+        display: flex;
     }
 
-
     .navbar__ul.reveal {
-        display:flex;
+        display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        margin-right:1.5em;
-       text-align: center;
-        
-       
+        margin-right: 1.5em;
+        text-align: center;
     }
 
     .navbar__ul {
         display: none;
-        
     }
 
-    
     .navbar.reveal {
         /* this keeps the sidebar in place when revealed */
         position: fixed;
         /* left:-300px; */
-        width:300px;
-        height:100%;
-        top:0;
+        width: 300px;
+        height: 100%;
+        top: 0;
     }
 
     #hamburger.reveal {
+        top: 35px;
         right: -200px;
-        height:50px;
-        color:white;
+        height: 50px;
+        color: white;
     }
-
 
     #hamburger {
         display: block;
-        position:relative;
-        color:white;
-        right:0; 
+        position: relative;
+        color: white;
+        right: 0;
         cursor: pointer;
     }
 
@@ -380,34 +375,31 @@ i:hover {
         margin: initial;
         width: 100%;
     }
-
 }
 
 /* media queries for iphone 8 / 9 / 10  */
 @media only screen and (max-width: 414px) {
-    
     .grid-container {
         grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 100px auto 125px; 
+        grid-template-rows: 125px auto 125px;
     }
-    
-    
+
     p {
         font-size: 1.5rem;
     }
 
     .post-container {
         padding: 0;
+        margin: 0;
     }
     .newest-post {
-        margin-top:1em;
+        margin-top: 0;
     }
     .newest-post__h2 {
         font-size: 2.2rem;
     }
 
     .newest-post iframe {
-        width: auto;
         height: 200px;
     }
 
