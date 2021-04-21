@@ -21,6 +21,7 @@ body {
     font-family: "Ubuntu";
     letter-spacing: 0.05em;
 }
+
 a {
     text-decoration: none;
     color: #3282a1;
@@ -89,7 +90,6 @@ header {
 .header__logo {
     height: 100%;
     width: 100px;
-    background: rgb(4, 4, 4);
 }
 
 .header__logo img {
@@ -432,4 +432,55 @@ i:hover {
     .header__logo {
         background: none;
     }
+}
+
+/* light theme */
+
+.grid-item-2.light-theme {
+    grid-area: c;
+    height: 100%;
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.473),
+            rgba(255, 255, 255, 0.877)
+        ),
+        url(images/carbonfiber.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar.light-theme {
+    background: #316579;
+
+    color: lightgoldenrodyellow;
+
+    box-shadow: none;
+    border-radius: 0 2px 2px 0;
+    transition: 0.25s;
+}
+
+.header.light-theme {
+    display: flex;
+    justify-content: center;
+    background: #3282a1;
+}
+
+.header__logo.light-theme {
+    height: 100%;
+    width: 100px;
+    background: #3282a1;
+}
+
+.newest-post.light-theme {
+    background: rgba(238, 236, 228, 0.815);
+    color: black;
+}
+
+.newest-post.light-theme h3 {
+    color: black;
+}
+
+.newest-post.light-theme blockquote {
+    color: white;
 }

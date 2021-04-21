@@ -3,14 +3,20 @@ const readMore = document.getElementById("newest-post__button");
 const backToTop = document.getElementById("backToTop");
 const hamburger = document.getElementById("hamburger");
 const navbar = document.getElementById("navbar");
+const stickyNavbar = document.getElementById("sticky-navbar");
 const navbarUl = document.getElementById("navbar__ul");
 const darken = document.getElementById("darken");
 const body = document.getElementById("body");
+const logo = document.getElementById("logo");
+const header = document.getElementById("header");
+const content = document.getElementById("content");
+const newestPost = document.getElementById("newest-post");
 
 readMore.addEventListener("click", showArticle);
 backToTop.addEventListener("click", closeArticle);
 hamburger.addEventListener("click", sidebar);
 darken.addEventListener("click", sidebar);
+logo.addEventListener("click", lightTheme);
 
 function showArticle() {
     hidden.classList.toggle("show");
@@ -41,4 +47,12 @@ function sidebar() {
     } else {
         body.style.overflow = "";
     }
+}
+
+function lightTheme() {
+    body.classList.toggle("light-theme");
+    stickyNavbar.classList.toggle("light-theme");
+    content.classList.toggle("light-theme");
+    header.classList.toggle("light-theme");
+    newestPost.classList.toggle("light-theme");
 }
