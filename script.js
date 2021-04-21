@@ -17,7 +17,7 @@ readMore.addEventListener("click", showArticle);
 backToTop.addEventListener("click", closeArticle);
 hamburger.addEventListener("click", sidebar);
 darken.addEventListener("click", sidebar);
-logo.addEventListener("click", lightTheme);
+// logo.addEventListener("click", lightTheme);
 
 function showArticle() {
     hidden.classList.toggle("show");
@@ -50,11 +50,49 @@ function sidebar() {
     }
 }
 
-function lightTheme() {
-    body.classList.toggle("light-theme");
-    stickyNavbar.classList.toggle("light-theme");
-    content.classList.toggle("light-theme");
-    header.classList.toggle("light-theme");
-    newestPost.classList.toggle("light-theme");
-    footer.classList.toggle("light-theme");
+// function lightTheme() {
+//     body.classList.toggle("light-theme");
+//     stickyNavbar.classList.toggle("light-theme");
+//     content.classList.toggle("light-theme");
+//     header.classList.toggle("light-theme");
+//     newestPost.classList.toggle("light-theme");
+//     footer.classList.toggle("light-theme");
+// }
+
+// theme choice save
+
+let lightMode = localStorage.getItem("lightMode");
+const enableLightMode = () => {
+    header.classList.add("light-theme");
+    body.classList.add("light-theme");
+    stickyNavbar.classList.add("light-theme");
+    content.classList.add("light-theme");
+    newestPost.classList.add("light-theme");
+    footer.classList.add("light-theme");
+
+    localStorage.setItem("lightMode", "enabled");
+};
+
+const disableLightMode = () => {
+    header.classList.remove("light-theme");
+    body.classList.remove("light-theme");
+    stickyNavbar.classList.add("light-theme");
+    content.classList.remove("light-theme");
+    newestPost.classList.remove("light-theme");
+    footer.classList.remove("light-theme");
+
+    localStorage.setItem("lightMode", null);
+};
+
+if (lightMode === "enabled") {
+    enableLightMode();
 }
+
+logo.addEventListener("click", () => {
+    lightMode = localStorage.getItem("lightMode");
+    if (lightMode !== "enabled") {
+        enableLightMode();
+    } else {
+        disableLightMode();
+    }
+});
