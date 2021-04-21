@@ -440,8 +440,8 @@ i:hover {
     grid-area: c;
     height: 100%;
     background: linear-gradient(
-            rgba(255, 255, 255, 0.473),
-            rgba(255, 255, 255, 0.877)
+            rgba(255, 255, 255, 0.877),
+            rgba(255, 255, 255, 0.733)
         ),
         url(images/carbonfiber.png);
     background-size: cover;
@@ -483,4 +483,8 @@ i:hover {
 
 .newest-post.light-theme blockquote {
     color: white;
+}
+
+.footer.light-theme {
+    background: #316579;
 }

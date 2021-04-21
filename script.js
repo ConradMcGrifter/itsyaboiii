@@ -11,6 +11,7 @@ const logo = document.getElementById("logo");
 const header = document.getElementById("header");
 const content = document.getElementById("content");
 const newestPost = document.getElementById("newest-post");
+const footer = document.getElementById("footer");
 
 readMore.addEventListener("click", showArticle);
 backToTop.addEventListener("click", closeArticle);
@@ -55,4 +56,5 @@ function lightTheme() {
     content.classList.toggle("light-theme");
     header.classList.toggle("light-theme");
     newestPost.classList.toggle("light-theme");
+    footer.classList.toggle("light-theme");
 }
