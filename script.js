@@ -4,7 +4,8 @@ const backToTop = document.getElementById("backToTop");
 const hamburger = document.getElementById("hamburger");
 const navbar = document.getElementById("navbar");
 const stickyNavbar = document.getElementById("sticky-navbar");
-const navbarUl = document.getElementById("navbar__ul");
+const navbarDesktop = document.getElementById("navbar__ul-desktop");
+const navbarMobile = document.getElementById("navbar__ul-mobile");
 const darken = document.getElementById("darken");
 const body = document.getElementById("body");
 const logo = document.getElementById("logo");
@@ -42,7 +43,8 @@ function closeArticle() {
 function sidebar() {
     hamburger.classList.toggle("reveal");
     navbar.classList.toggle("reveal");
-    navbarUl.classList.toggle("reveal");
+    navbarDesktop.classList.toggle("reveal");
+    navbarMobile.classList.toggle("reveal");
     darken.classList.toggle("darken");
     if (hamburger.classList.contains("reveal")) {
         body.style.overflow = "hidden";
@@ -61,18 +63,18 @@ const enableLightMode = () => {
     content.classList.add("light-theme");
     newestPost.classList.add("light-theme");
     footer.classList.add("light-theme");
-
+    navbar.classList.add("light-theme");
     localStorage.setItem("lightMode", "enabled");
 };
 
 const disableLightMode = () => {
     header.classList.remove("light-theme");
     body.classList.remove("light-theme");
-    stickyNavbar.classList.add("light-theme");
+    stickyNavbar.classList.remove("light-theme");
     content.classList.remove("light-theme");
     newestPost.classList.remove("light-theme");
     footer.classList.remove("light-theme");
-
+    navbar.classList.remove("light-theme");
     localStorage.setItem("lightMode", null);
 };
 
@@ -84,6 +86,7 @@ toggleDesktop.addEventListener("click", () => {
     lightMode = localStorage.getItem("lightMode");
     if (lightMode !== "enabled") {
         enableLightMode();
+        document;
     } else {
         disableLightMode();
     }

@@ -1,6 +1,8 @@
 :root {
     --clr-primary: #3282a1;
+    --clr-accent: #316579;
     --clr-links: lightgoldenrodyellow;
+    --clr-links-light-theme: lightskyblue;
 }
 
 html {
@@ -118,24 +120,25 @@ header {
     background-attachment: fixed;
 }
 /* sticky navbar */
+
+#navbar {
+    display: none;
+}
+
 .navbar {
     display: flex;
     width: 100%;
     justify-content: center;
-    background: #316579;
+    background: #0d1b20;
     position: sticky;
     top: 0;
     z-index: 999;
     padding: 0.3em;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.582);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.616);
 }
 
 #sticky-navbar {
     display: flex;
-}
-
-#navbar {
-    display: none;
 }
 
 #hamburger {
@@ -153,7 +156,8 @@ header {
 
 #modeToggleDesktop,
 #modeToggleMobile {
-    color: var(--clr-links);
+    color: lightskyblue;
+    cursor: pointer;
 }
 
 .navbar__ul a {
@@ -308,9 +312,9 @@ i:hover {
         display: flex;
         width: 50px;
         justify-content: center;
-        background: #316579;
+
         position: fixed;
-        top: 35px;
+        top: 40px;
         z-index: 999;
         color: lightgoldenrodyellow;
         padding: 0.1em;
@@ -339,6 +343,8 @@ i:hover {
 
     .navbar__ul {
         display: none;
+        height: 70%;
+        margin-top: 5em;
     }
 
     .navbar.reveal {
@@ -449,6 +455,10 @@ i:hover {
                                                       light theme 
                                                      ============= */
 
+.navbar__ul a.light-theme {
+    color: var(--clr-links);
+}
+
 .grid-item-2.light-theme {
     grid-area: c;
     height: 100%;
@@ -468,7 +478,7 @@ i:hover {
 
     color: var(--clr-links);
 
-    box-shadow: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.466);
     border-radius: 0 2px 2px 0;
     transition: 0.25s;
 }
