@@ -434,7 +434,9 @@ i:hover {
     }
 }
 
-/* light theme */
+/*=============
+                                                      light theme 
+                                                     ============= */
 
 .grid-item-2.light-theme {
     grid-area: c;
