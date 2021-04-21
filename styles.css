@@ -189,12 +189,6 @@ header {
     margin: 0 0 0.5em 0;
 }
 
-.grid-item-3 {
-    grid-area: f;
-
-    background: rgba(33, 33, 33, 0.5);
-}
-
 .newest-post--hidden {
     display: none;
 }
@@ -266,6 +260,12 @@ header {
                                                                footer - grid area: f
                                                              ========================*/
 
+.grid-item-3 {
+    grid-area: f;
+
+    background: rgba(33, 33, 33, 0.5);
+}
+
 .footer {
     align-items: center;
     justify-content: center;
@@ -310,10 +310,12 @@ i:hover {
         transition: 0.25s;
     }
 
+    /* hides the desktop navbar  */
     #sticky-navbar {
         display: none;
     }
 
+    /* shows the mobile hamburger navbar */
     #navbar {
         display: flex;
     }
