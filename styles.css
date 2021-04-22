@@ -31,7 +31,7 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--clr-primary);
+    /* color: var(--clr-primary); */
 }
 
 p {
@@ -129,7 +129,7 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
-    background: #0d1b20;
+    background: #0b1f25;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -143,6 +143,12 @@ header {
 
 #hamburger {
     display: none;
+}
+
+.theme {
+    position: absolute;
+    z-index: 999;
+    left: 50px;
 }
 
 .navbar__ul {
@@ -161,7 +167,7 @@ header {
 }
 
 .navbar__ul a {
-    color: var(--clr-links);
+    color: var(--clr-links-light-theme);
     transition: 0.5s;
 }
 
@@ -333,6 +339,11 @@ i:hover {
         display: flex;
     }
 
+    .theme {
+        bottom: 55px;
+        left: 100px;
+    }
+
     .navbar__ul.reveal {
         display: flex;
         flex-direction: column;
@@ -455,8 +466,8 @@ i:hover {
                                                       light theme 
                                                      ============= */
 
-.navbar__ul a.light-theme {
-    color: var(--clr-links);
+.nav__li.light-theme {
+    color: red;
 }
 
 .grid-item-2.light-theme {
@@ -476,7 +487,7 @@ i:hover {
 .navbar.light-theme {
     background: #316579;
 
-    color: var(--clr-links);
+    /* color: var(--clr-links); */
 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.466);
     border-radius: 0 2px 2px 0;

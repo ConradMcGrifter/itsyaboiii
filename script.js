@@ -64,6 +64,7 @@ const enableLightMode = () => {
     newestPost.classList.add("light-theme");
     footer.classList.add("light-theme");
     navbar.classList.add("light-theme");
+
     localStorage.setItem("lightMode", "enabled");
 };
 
@@ -75,6 +76,7 @@ const disableLightMode = () => {
     newestPost.classList.remove("light-theme");
     footer.classList.remove("light-theme");
     navbar.classList.remove("light-theme");
+
     localStorage.setItem("lightMode", null);
 };
 
