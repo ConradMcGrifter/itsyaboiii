@@ -340,8 +340,7 @@ i:hover {
     }
 
     .theme {
-        bottom: 55px;
-        left: 100px;
+        position: initial;
     }
 
     .navbar__ul.reveal {
