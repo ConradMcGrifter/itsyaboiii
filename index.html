@@ -17,8 +17,10 @@
         <title>its yaboiii</title>
     </head>
     <body id="body">
+        <!-- i needed to make two seperate nav bars because it wouldnt behave the way i wanted it to. the desktop navbar is sticky
+            while the mobile navbar is fixed. in the long run this is probably a bad solution so I should try to make a better design in the future-->
         <!-- mobile nav bar -->
-        <nav class="navbar" id="navbar">
+        <nav class="navbar" id="mobile-navbar">
             <i class="fas fa-bars fa-2x" id="hamburger"></i>
             <ul class="navbar__ul" id="navbar__ul-mobile">
                 <li class="nav__li theme" id="modeToggle">
@@ -27,7 +29,7 @@
                         id="modeToggleMobile"
                     ></i>
                 </li>
-                <li class="nav__li"><a href="pages/404.html">BLOG</a></li>
+                <li class="nav__li"><a href="pages/404.html">ABOUT</a></li>
                 <li class="nav__li"><a href="pages/404.html">DROPS</a></li>
                 <li class="nav__li"><a href="pages/404.html">COLLECTION</a></li>
                 <li class="nav__li"><a href="pages/404.html">CONTACT</a></li>
@@ -51,14 +53,12 @@
                     <ul class="navbar__ul" id="navbar__ul-desktop">
                         <li class="nav__li theme">
                             <i
-                                class="fas fa-adjust fa-lg modeToggle"
-                                id="modeToggleDesktop"
-                            >
-                                THEME</i
-                            >
+                                class="fas fa-adjust fa-md modeToggle"
+                                id="modeToggleDesktop">
+                            </i>
                         </li>
                         <li class="nav__li">
-                            <a href="pages/404.html">BLOG</a>
+                            <a href="pages/404.html">ABOUT</a>
                         </li>
                         <li class="nav__li">
                             <a href="pages/404.html">DROPS</a>
@@ -74,6 +74,7 @@
                 <!-- newest post + a few most recent posts container -->
                 <main class="post-container">
                     <!-- newest post -->
+                    
                     <article class="newest-post" id="newest-post">
                         <h2 class="newest-post__h2">
                             Lorem ipsum dolor sit amet.
@@ -88,6 +89,7 @@
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen
                         ></iframe>
+                       
                         <p class="newest-post__p" id="yaboiii">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Qui in odit dicta dolorem non sequi, rerum
@@ -181,6 +183,8 @@
             </section>
         </div>
         <!--grid container ends-->
+        <!-- load this stuff so javaScript works but display is set to none -->
+        <div id="error" style="display: none"></div>
 
         <script src="script.js"></script>
     </body>

@@ -1,6 +1,7 @@
 :root {
     --clr-primary: #3282a1;
     --clr-accent: #316579;
+    --clr-nav: #0b1f25;
     --clr-links: lightgoldenrodyellow;
     --clr-links-light-theme: lightskyblue;
 }
@@ -29,9 +30,11 @@ body {
     letter-spacing: 0.05em;
 }
 
+
+
 a {
     text-decoration: none;
-    /* color: var(--clr-primary); */
+   
 }
 
 p {
@@ -71,21 +74,11 @@ blockquote {
                                                                  HEADER - grid area: h
                                                                 =======================*/
 
-/* header img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-}
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
 
 .grid-item-1 {
     grid-area: h;
-    background: rgba(25, 25, 25, 0.75);
+   
 }
 
 .header {
@@ -119,9 +112,13 @@ header {
     background-position: center;
     background-attachment: fixed;
 }
-/* sticky navbar */
+/* sticky navbar for desktop*/
 
-#navbar {
+#sticky-navbar {
+    display: flex;
+}
+
+#mobile-navbar {
     display: none;
 }
 
@@ -129,7 +126,7 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
-    background: #0b1f25;
+    background:var(--clr-nav);
     position: sticky;
     top: 0;
     z-index: 999;
@@ -137,14 +134,13 @@ header {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.616);
 }
 
-#sticky-navbar {
-    display: flex;
-}
+
 
 #hamburger {
     display: none;
 }
 
+/* this moves the theme icon to the left side of the navbar on desktop */
 .theme {
     position: absolute;
     z-index: 999;
@@ -160,14 +156,22 @@ header {
     list-style-type: none;
 }
 
+
+/* these are the IDs for the theme/mode icon */
 #modeToggleDesktop,
 #modeToggleMobile {
     color: lightskyblue;
     cursor: pointer;
+    transition:1s;
+}
+
+#modeToggleDesktop.light-theme, #modeToggleMobile.light-theme {
+    color: var(--clr-links);
+    transform:rotate(180deg);
 }
 
 .navbar__ul a {
-    color: var(--clr-links-light-theme);
+    color: var(--clr-links);
     transition: 0.5s;
 }
 
@@ -177,7 +181,7 @@ header {
 
 /* this wraps all the main content */
 .post-container {
-    /* outline: solid blue 3px; */
+    
     width: 100%;
     padding: 1em;
     display: flex;
@@ -199,21 +203,18 @@ header {
     box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.438);
 }
 
-.newest-post iframe {
-    width: 100%;
-}
-
 .newest-post__h2 {
     font-size: 4rem;
     margin: 0 0 0.5em 0;
 }
 
-.newest-post--hidden {
-    display: none;
+.newest-post__h3 {
+    color:var(--clr-primary);
 }
 
-.newest-post--hidden.show {
-    display: block;
+
+.newest-post iframe {
+    width: 100%;
 }
 
 #newest-post__button {
@@ -232,11 +233,23 @@ header {
 }
 
 #newest-post__button:hover {
-    /* border: solid white 2px; */
     color: white;
 
     background: #3282a1;
 }
+
+
+
+/* when the "read more" button is clicked, the .show class is toggled on or off */
+.newest-post--hidden {
+    display: none;
+}
+
+.newest-post--hidden.show {
+    display: block;
+}
+
+
 
 #backToTop {
     display: none;
@@ -267,13 +280,7 @@ header {
     }
 }
 
-/* .small-footer {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background: rgba(33, 33, 33, 0.5);
-    grid-area: s;
-} */
+
 
 /* ========================
                                                                footer - grid area: f
@@ -282,7 +289,7 @@ header {
 .grid-item-3 {
     grid-area: f;
 
-    background: rgb(33, 33, 33);
+    background: var(--clr-nav);
 }
 
 .footer {
@@ -318,7 +325,6 @@ i:hover {
         display: flex;
         width: 50px;
         justify-content: center;
-
         position: fixed;
         top: 40px;
         z-index: 999;
@@ -335,14 +341,22 @@ i:hover {
     }
 
     /* shows the mobile hamburger navbar */
-    #navbar {
+    #mobile-navbar {
         display: flex;
     }
 
+
+    /* this moves the theme picker icon back into the normal document flow */
     .theme {
         position: initial;
     }
 
+    .newest-post {
+        padding: 1em;
+    }
+
+
+    /* this is the navbar for mobile that gets revealed when switching to mobile sizes */
     .navbar__ul.reveal {
         display: flex;
         flex-direction: column;
@@ -360,7 +374,6 @@ i:hover {
     .navbar.reveal {
         /* this keeps the sidebar in place when revealed */
         position: fixed;
-        /* left:-300px; */
         width: 300px;
         height: 100%;
         top: 0;
@@ -373,6 +386,7 @@ i:hover {
         color: white;
     }
 
+    /* hamburger is revealed */
     #hamburger {
         display: block;
         position: relative;
@@ -394,17 +408,16 @@ i:hover {
         width: 100%;
     }
 
-    .newest-post {
-        padding: 1em;
-    }
-
+  
     #backToTop {
         margin: initial;
         width: 100%;
     }
 }
 
-/* media queries for iphone 8 / 9 / 10  */
+/* 
+                                                        media queries for iphone 8 / 9 / 10  
+*/
 @media only screen and (max-width: 414px) {
     .grid-container {
         grid-template-columns: repeat(12, 1fr);
@@ -514,11 +527,11 @@ i:hover {
 
 .newest-post.light-theme {
     background: rgba(238, 236, 228, 0.815);
-    color: black;
+    color: rgb(7, 7, 7);
 }
 
 .newest-post.light-theme h3 {
-    color: black;
+    color: rgb(7, 7, 7);
 }
 
 .newest-post.light-theme blockquote {
@@ -529,9 +542,23 @@ i:hover {
     background: #316579;
 }
 
+.error-message.light-theme {
+    background:white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* =========
                                                  404 page 
                                                 ==========*/
+
+
+
+/* the styles for the exclamation icon are in the html */
 
 .error-message {
     background: rgba(0, 0, 0, 0.897);
@@ -546,7 +573,7 @@ i:hover {
 .home {
     margin-top: 1em;
     font-size: 2.5rem;
-    color: rgb(255, 183, 49);
+    color:rgb(248, 58, 0)
 }
 
-/* the styles for the exclamation icon are in the html */
+

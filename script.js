@@ -1,48 +1,72 @@
+
+// this hides the content of the most recent blog post
 const hidden = document.getElementById("hidden");
+// this is the read more button for the newest post and the back to top button
 const readMore = document.getElementById("newest-post__button");
 const backToTop = document.getElementById("backToTop");
+// hamburger icon for mobile
 const hamburger = document.getElementById("hamburger");
-const navbar = document.getElementById("navbar");
+// theses are the full navbars for mobile and desktop
+const mobileNavbar = document.getElementById("mobile-navbar");
 const stickyNavbar = document.getElementById("sticky-navbar");
+// these are the navbar unordered lists that contain the links
 const navbarDesktop = document.getElementById("navbar__ul-desktop");
 const navbarMobile = document.getElementById("navbar__ul-mobile");
+// this darkens the screen when mobile navbar is showing
 const darken = document.getElementById("darken");
+// 
 const body = document.getElementById("body");
 const logo = document.getElementById("logo");
 const header = document.getElementById("header");
 const content = document.getElementById("content");
 const newestPost = document.getElementById("newest-post");
 const footer = document.getElementById("footer");
+const errorBg = document.getElementById("error");
+// this is the icon to toggle the theme (one for mobile and one for desktop)
 const toggleDesktop = document.getElementById("modeToggleDesktop");
 const toggleMobile = document.getElementById("modeToggleMobile");
 
+
+// event listeners
 readMore.addEventListener("click", showArticle);
 backToTop.addEventListener("click", closeArticle);
 hamburger.addEventListener("click", sidebar);
 darken.addEventListener("click", sidebar);
 
+
+
+// this shows the rest of the most recent article when "read more" button is clicked
 function showArticle() {
     hidden.classList.toggle("show");
-
+    
     if (hidden.classList.contains("show")) {
         readMore.style.display = "none";
         backToTop.style.display = "flex";
         hidden.style.animation = "fadeIn 1s";
+        
     }
 }
 
+// this closes the article when the "back to top" link is clicked and scrolls you to the top of the page
 function closeArticle() {
+    
+    // this closes the article by removing the class "show" if it is currently on the hidden content
     if (hidden.classList.contains("show")) {
         hidden.classList.toggle("show");
     }
+    
+    // this resets the "read more" button to be visible and hides the "back to top" button
     backToTop.style.display = "none";
     readMore.style.display = "flex";
     document.getElementById("header").scrollIntoView();
 }
 
+
+// this function open and closes the sidebar when hamburger is clicked
 function sidebar() {
+    // the reveal class makes the mobile nav menu visible by moving elements into view and changing the display
     hamburger.classList.toggle("reveal");
-    navbar.classList.toggle("reveal");
+    mobileNavbar.classList.toggle("reveal");
     navbarDesktop.classList.toggle("reveal");
     navbarMobile.classList.toggle("reveal");
     darken.classList.toggle("darken");
@@ -63,8 +87,12 @@ const enableLightMode = () => {
     content.classList.add("light-theme");
     newestPost.classList.add("light-theme");
     footer.classList.add("light-theme");
-    navbar.classList.add("light-theme");
-
+    mobileNavbar.classList.add("light-theme");
+    toggleMobile.classList.add("light-theme");
+    toggleDesktop.classList.add("light-theme");
+    errorBg.classList.add("light-theme");
+    
+  
     localStorage.setItem("lightMode", "enabled");
 };
 
@@ -75,9 +103,14 @@ const disableLightMode = () => {
     content.classList.remove("light-theme");
     newestPost.classList.remove("light-theme");
     footer.classList.remove("light-theme");
-    navbar.classList.remove("light-theme");
-
+    mobileNavbar.classList.remove("light-theme");
+    toggleMobile.classList.remove("light-theme");
+    toggleDesktop.classList.remove("light-theme");
+    errorBg.classList.remove("light-theme");
+    
     localStorage.setItem("lightMode", null);
+
+   
 };
 
 if (lightMode === "enabled") {

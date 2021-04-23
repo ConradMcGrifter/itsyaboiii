@@ -17,20 +17,22 @@
         <title>its yaboiii</title>
     </head>
     <body id="body">
+     <!-- i needed to make two seperate nav bars because it wouldnt behave the way i wanted it to. the desktop navbar is sticky
+            while the mobile navbar is fixed. in the long run this is probably a bad solution so I should try to make a better design in the future-->
         <!-- mobile nav bar -->
-        <nav class="navbar" id="navbar">
+        <nav class="navbar" id="mobile-navbar">
             <i class="fas fa-bars fa-2x" id="hamburger"></i>
             <ul class="navbar__ul" id="navbar__ul-mobile">
-                <!-- <li class="nav__li theme">
+                <li class="nav__li theme" id="modeToggle">
                     <i
                         class="fas fa-adjust fa-lg modeToggle"
-                        id="modeToggleMobile"></i
-                    >
-                </li> -->
-                <li class="nav__li"><a href="#">BLOG</a></li>
-                <li class="nav__li"><a href="#">DROPS</a></li>
-                <li class="nav__li"><a href="#">COLLECTION</a></li>
-                <li class="nav__li"><a href="#">CONTACT</a></li>
+                        id="modeToggleMobile"
+                    ></i>
+                </li>
+                <li class="nav__li"><a href="pages/404.html">BLOG</a></li>
+                <li class="nav__li"><a href="pages/404.html">DROPS</a></li>
+                <li class="nav__li"><a href="pages/404.html">COLLECTION</a></li>
+                <li class="nav__li"><a href="pages/404.html">CONTACT</a></li>
             </ul>
         </nav>
         <div id="darken"></div>
@@ -43,7 +45,6 @@
                     <img src="../images/iphone5noBG.png" alt="" id="logo" />
                 </div>
             </header>
-
             <!-- grid item 2 -->
             <section class="grid-item-2 content" id="content">
                 <!-- desktop sticky nav bar -->
@@ -51,22 +52,28 @@
                     <ul class="navbar__ul" id="navbar__ul-desktop">
                         <li class="nav__li theme">
                             <i
-                                class="fas fa-adjust fa-lg modeToggle"
-                                id="modeToggleDesktop"
-                            >
-                                THEME</i
-                            >
+                                class="fas fa-adjust fa-md modeToggle"
+                                id="modeToggleDesktop">
+                            </i>
                         </li>
-                        <li class="nav__li"><a href="#">BLOG</a></li>
-                        <li class="nav__li"><a href="#">DROPS</a></li>
-                        <li class="nav__li"><a href="#">COLLECTION</a></li>
-                        <li class="nav__li"><a href="#">CONTACT</a></li>
+                        <li class="nav__li">
+                            <a href="pages/404.html">BLOG</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="pages/404.html">DROPS</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="pages/404.html">COLLECTION</a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="pages/404.html">CONTACT</a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- content -->
-                <div class="error-message">
+                <div class="error-message" id="error">
                     <i
-                        style="color: rgb(255, 183, 49)"
+                        style="color: rgb(248, 58, 0)"
                         class="fas fa-undo fa-3x"
                     ></i>
                     <a class="home" href="../index.html">return home</a>
