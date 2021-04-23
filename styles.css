@@ -74,6 +74,7 @@ blockquote {
     padding: 1em;
 }
 
+/* main grid for the website layout */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -226,6 +227,7 @@ blockquote {
     width: 100%;
 }
 
+/* this is the read more button that expands the newest post if clicked */
 #newest-post__button {
     cursor: pointer;
     border: solid var(--clr-primary) 2px;
@@ -537,7 +539,7 @@ i:hover {
 }
 
 .newest-post.light-theme h3 {
-    color: rgb(7, 7, 7);
+    color: purple;
 }
 
 .newest-post.light-theme blockquote {
