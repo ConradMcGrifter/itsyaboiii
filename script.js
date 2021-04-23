@@ -1,4 +1,3 @@
-
 // this hides the content of the most recent blog post
 const hidden = document.getElementById("hidden");
 // this is the read more button for the newest post and the back to top button
@@ -14,7 +13,7 @@ const navbarDesktop = document.getElementById("navbar__ul-desktop");
 const navbarMobile = document.getElementById("navbar__ul-mobile");
 // this darkens the screen when mobile navbar is showing
 const darken = document.getElementById("darken");
-// 
+//
 const body = document.getElementById("body");
 const logo = document.getElementById("logo");
 const header = document.getElementById("header");
@@ -25,42 +24,38 @@ const errorBg = document.getElementById("error");
 // this is the icon to toggle the theme (one for mobile and one for desktop)
 const toggleDesktop = document.getElementById("modeToggleDesktop");
 const toggleMobile = document.getElementById("modeToggleMobile");
+//
+//                                   event listeners
+//
 
-
-// event listeners
-readMore.addEventListener("click", showArticle);
-backToTop.addEventListener("click", closeArticle);
-hamburger.addEventListener("click", sidebar);
-darken.addEventListener("click", sidebar);
-
-
-
-// this shows the rest of the most recent article when "read more" button is clicked
-function showArticle() {
+readMore.addEventListener("click", () => {
+    // this shows the rest of the most recent article when "read more" button is clicked
     hidden.classList.toggle("show");
-    
+
+    // this hides the read more button if the hidden content is showing
     if (hidden.classList.contains("show")) {
         readMore.style.display = "none";
         backToTop.style.display = "flex";
         hidden.style.animation = "fadeIn 1s";
-        
     }
-}
+});
 
-// this closes the article when the "back to top" link is clicked and scrolls you to the top of the page
-function closeArticle() {
-    
+backToTop.addEventListener("click", () => {
     // this closes the article by removing the class "show" if it is currently on the hidden content
     if (hidden.classList.contains("show")) {
         hidden.classList.toggle("show");
     }
-    
     // this resets the "read more" button to be visible and hides the "back to top" button
     backToTop.style.display = "none";
     readMore.style.display = "flex";
     document.getElementById("header").scrollIntoView();
-}
+});
 
+hamburger.addEventListener("click", sidebar);
+// this lets you close the mobile menu by clicking on the darkened area that isnt the nav menu
+darken.addEventListener("click", sidebar);
+
+//                                       functions
 
 // this function open and closes the sidebar when hamburger is clicked
 function sidebar() {
@@ -77,7 +72,9 @@ function sidebar() {
     }
 }
 
-// theme choice save
+//
+//                              theme choice save to local storage
+//
 
 let lightMode = localStorage.getItem("lightMode");
 const enableLightMode = () => {
@@ -91,8 +88,7 @@ const enableLightMode = () => {
     toggleMobile.classList.add("light-theme");
     toggleDesktop.classList.add("light-theme");
     errorBg.classList.add("light-theme");
-    
-  
+
     localStorage.setItem("lightMode", "enabled");
 };
 
@@ -107,10 +103,8 @@ const disableLightMode = () => {
     toggleMobile.classList.remove("light-theme");
     toggleDesktop.classList.remove("light-theme");
     errorBg.classList.remove("light-theme");
-    
-    localStorage.setItem("lightMode", null);
 
-   
+    localStorage.setItem("lightMode", null);
 };
 
 if (lightMode === "enabled") {
