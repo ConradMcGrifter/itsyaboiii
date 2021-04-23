@@ -22,7 +22,7 @@
     --clr-accent: #316579;
     --clr-nav: #0b1f25;
     --clr-links: lightgoldenrodyellow;
-    --clr-links-light-theme: lightskyblue;
+    --clr-links-secondary: lightskyblue;
 }
 
 html {
@@ -63,7 +63,7 @@ h3 {
     font-weight: 400;
     font-size: 1.8rem;
 
-    color: lightgoldenrodyellow;
+    color: var(--clr-links);
 }
 
 blockquote {
@@ -170,7 +170,7 @@ blockquote {
 /* these are the IDs for the theme/mode icon */
 #modeToggleDesktop,
 #modeToggleMobile {
-    color: lightskyblue;
+    color: var(--clr-links-secondary);
     cursor: pointer;
     transition: 1s;
 }
@@ -244,7 +244,7 @@ blockquote {
 #newest-post__button:hover {
     color: white;
 
-    background: #3282a1;
+    background: var(--clr-primary);
 }
 
 /* when the "read more" button is clicked, the .show class is toggled on or off */
@@ -336,7 +336,7 @@ i:hover {
         position: fixed;
         top: 40px;
         z-index: 999;
-        color: lightgoldenrodyellow;
+        color: var(--clr-links);
         padding: 0.1em;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.644);
         border-radius: 0 2px 2px 0;
@@ -503,7 +503,7 @@ i:hover {
 }
 
 .navbar.light-theme {
-    background: #316579;
+    background: var(--clr-accent);
 
     /* color: var(--clr-links); */
 
@@ -545,7 +545,7 @@ i:hover {
 }
 
 .footer.light-theme {
-    background: #316579;
+    background: var(--clr-accent);
 }
 
 .error-message.light-theme {
