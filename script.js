@@ -4,15 +4,15 @@ const hidden = document.getElementById("hidden");
 const readMore = document.getElementById("newest-post__button");
 const backToTop = document.getElementById("backToTop");
 // hamburger icon for mobile
-// const hamburger = document.getElementById("hamburger");
+const hamburger = document.getElementById("hamburger");
 // theses are the full navbars for mobile and desktop
 // const mobileNavbar = document.getElementById("mobile-navbar");
 const stickyNavbar = document.getElementById("sticky-navbar");
 // these are the navbar unordered lists that contain the links
-// const navbarDesktop = document.getElementById("navbar__ul-desktop");
+const navbarDesktop = document.getElementById("navbar__ul-desktop");
 // const navbarMobile = document.getElementById("navbar__ul-mobile");
 // this darkens the screen when mobile navbar is showing
-// const darken = document.getElementById("darken");
+const darken = document.getElementById("darken");
 //
 const body = document.getElementById("body");
 const logo = document.getElementById("logo");
@@ -21,9 +21,9 @@ const content = document.getElementById("content");
 const newestPost = document.getElementById("newest-post");
 const footer = document.getElementById("footer");
 const errorBg = document.getElementById("error");
-// this is the icon to toggle the theme (one for mobile and one for desktop)
+// this is the icon to toggle the theme 
 const toggleDesktop = document.getElementById("modeToggleDesktop");
-const toggleMobile = document.getElementById("modeToggleMobile");
+
 //
 //                                   event listeners
 //
@@ -51,26 +51,27 @@ backToTop.addEventListener("click", () => {
     document.getElementById("header").scrollIntoView();
 });
 
-// hamburger.addEventListener("click", sidebar);
-// // this lets you close the mobile menu by clicking on the darkened area that isnt the nav menu
-// darken.addEventListener("click", sidebar);
+hamburger.addEventListener("click", sidebar);
+// this lets you close the mobile menu by clicking on the darkened area that isnt the nav menu
+darken.addEventListener("click", sidebar);
 
 // //                                       functions
 
-// // this function open and closes the sidebar when hamburger is clicked
-// function sidebar() {
-//     // the reveal class makes the mobile nav menu visible by moving elements into view and changing the display
-//     hamburger.classList.toggle("reveal");
-//     // mobileNavbar.classList.toggle("reveal");
-//     navbarDesktop.classList.toggle("reveal");
-//     // navbarMobile.classList.toggle("reveal");
-//     darken.classList.toggle("darken");
-//     if (hamburger.classList.contains("reveal")) {
-//         body.style.overflow = "hidden";
-//     } else {
-//         body.style.overflow = "";
-//     }
-// }
+// this function open and closes the sidebar when hamburger is clicked
+function sidebar() {
+    // the reveal class makes the mobile nav menu visible by moving elements into view and changing the display
+    hamburger.classList.toggle("reveal");
+    stickyNavbar.classList.toggle("reveal");
+    // mobileNavbar.classList.toggle("reveal");
+    navbarDesktop.classList.toggle("reveal");
+    // navbarMobile.classList.toggle("reveal");
+    darken.classList.toggle("darken");
+    if (hamburger.classList.contains("reveal")) {
+        body.style.overflow = "hidden";
+    } else {
+        body.style.overflow = "";
+    }
+}
 
 //
 //                              theme choice save to local storage
@@ -121,11 +122,3 @@ toggleDesktop.addEventListener("click", () => {
     }
 });
 
-toggleMobile.addEventListener("click", () => {
-    lightMode = localStorage.getItem("lightMode");
-    if (lightMode !== "enabled") {
-        enableLightMode();
-    } else {
-        disableLightMode();
-    }
-});
