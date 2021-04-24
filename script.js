@@ -7,7 +7,7 @@ const backToTop = document.getElementById("backToTop");
 // const hamburger = document.getElementById("hamburger");
 // theses are the full navbars for mobile and desktop
 // const mobileNavbar = document.getElementById("mobile-navbar");
-// const stickyNavbar = document.getElementById("sticky-navbar");
+const stickyNavbar = document.getElementById("sticky-navbar");
 // these are the navbar unordered lists that contain the links
 // const navbarDesktop = document.getElementById("navbar__ul-desktop");
 // const navbarMobile = document.getElementById("navbar__ul-mobile");
