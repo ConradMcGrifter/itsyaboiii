@@ -4,15 +4,15 @@ const hidden = document.getElementById("hidden");
 const readMore = document.getElementById("newest-post__button");
 const backToTop = document.getElementById("backToTop");
 // hamburger icon for mobile
-const hamburger = document.getElementById("hamburger");
+// const hamburger = document.getElementById("hamburger");
 // theses are the full navbars for mobile and desktop
-const mobileNavbar = document.getElementById("mobile-navbar");
-const stickyNavbar = document.getElementById("sticky-navbar");
+// const mobileNavbar = document.getElementById("mobile-navbar");
+// const stickyNavbar = document.getElementById("sticky-navbar");
 // these are the navbar unordered lists that contain the links
-const navbarDesktop = document.getElementById("navbar__ul-desktop");
-const navbarMobile = document.getElementById("navbar__ul-mobile");
+// const navbarDesktop = document.getElementById("navbar__ul-desktop");
+// const navbarMobile = document.getElementById("navbar__ul-mobile");
 // this darkens the screen when mobile navbar is showing
-const darken = document.getElementById("darken");
+// const darken = document.getElementById("darken");
 //
 const body = document.getElementById("body");
 const logo = document.getElementById("logo");
@@ -51,26 +51,26 @@ backToTop.addEventListener("click", () => {
     document.getElementById("header").scrollIntoView();
 });
 
-hamburger.addEventListener("click", sidebar);
-// this lets you close the mobile menu by clicking on the darkened area that isnt the nav menu
-darken.addEventListener("click", sidebar);
+// hamburger.addEventListener("click", sidebar);
+// // this lets you close the mobile menu by clicking on the darkened area that isnt the nav menu
+// darken.addEventListener("click", sidebar);
 
-//                                       functions
+// //                                       functions
 
-// this function open and closes the sidebar when hamburger is clicked
-function sidebar() {
-    // the reveal class makes the mobile nav menu visible by moving elements into view and changing the display
-    hamburger.classList.toggle("reveal");
-    mobileNavbar.classList.toggle("reveal");
-    navbarDesktop.classList.toggle("reveal");
-    navbarMobile.classList.toggle("reveal");
-    darken.classList.toggle("darken");
-    if (hamburger.classList.contains("reveal")) {
-        body.style.overflow = "hidden";
-    } else {
-        body.style.overflow = "";
-    }
-}
+// // this function open and closes the sidebar when hamburger is clicked
+// function sidebar() {
+//     // the reveal class makes the mobile nav menu visible by moving elements into view and changing the display
+//     hamburger.classList.toggle("reveal");
+//     // mobileNavbar.classList.toggle("reveal");
+//     navbarDesktop.classList.toggle("reveal");
+//     // navbarMobile.classList.toggle("reveal");
+//     darken.classList.toggle("darken");
+//     if (hamburger.classList.contains("reveal")) {
+//         body.style.overflow = "hidden";
+//     } else {
+//         body.style.overflow = "";
+//     }
+// }
 
 //
 //                              theme choice save to local storage
@@ -84,8 +84,8 @@ const enableLightMode = () => {
     content.classList.add("light-theme");
     newestPost.classList.add("light-theme");
     footer.classList.add("light-theme");
-    mobileNavbar.classList.add("light-theme");
-    toggleMobile.classList.add("light-theme");
+    // mobileNavbar.classList.add("light-theme");
+    // toggleMobile.classList.add("light-theme");
     toggleDesktop.classList.add("light-theme");
     errorBg.classList.add("light-theme");
 
@@ -99,8 +99,8 @@ const disableLightMode = () => {
     content.classList.remove("light-theme");
     newestPost.classList.remove("light-theme");
     footer.classList.remove("light-theme");
-    mobileNavbar.classList.remove("light-theme");
-    toggleMobile.classList.remove("light-theme");
+    // mobileNavbar.classList.remove("light-theme");
+    // toggleMobile.classList.remove("light-theme");
     toggleDesktop.classList.remove("light-theme");
     errorBg.classList.remove("light-theme");
 
