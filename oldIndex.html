@@ -28,7 +28,7 @@
             </header>
 
             <!-- grid item 2  /STICKY NAVBAR AND MAIN CONTENT-->
-            <section class="grid-item-2 content main-grid" id="content">
+            <section class="grid-item-2 content" id="content">
                 <!-- desktop sticky nav bar -->
                 <nav class="navbar" id="sticky-navbar">
                     <i class="fas fa-bars fa-lg" id="hamburger"></i>
@@ -55,43 +55,22 @@
                     </ul>
                 </nav>
                 <div id="darken"></div>
-                <!-- newest post + sidebar -->
-                
-                <!-- sidebar -->
-                <div class="main__sidebar" id="sidebar">
-                    <div class="main__sidebar-wrap">
-                        <h3 class="sidebar__h3">recent posts</h3>
-                            <div class="sidebar__item-wrap">
-                                <div class="sidebar__item">
-                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/L6yX6Oxy_J8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                                <div class="sidebar__item">
-                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6YPRRB-uQ6Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                                <div class="sidebar__item">
-                                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/B8y3SSmz4sg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                
+                <!-- newest post + a few most recent posts container -->
                 <main class="post-container">
                     <!-- newest post -->
 
                     <article class="newest-post" id="newest-post">
                         <h2 class="newest-post__h2">Basic Mashed Potatoes</h2>
                         <h3 class="newest-post__h3">April 20th, 2021</h3>
-                        <div class="iframe-wrap">
-                            <iframe
-                                width="560"
-                                height="315"
-                                src="https://www.youtube.com/embed/IDu5czNIM1w"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                            ></iframe>
-                        </div>
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/IDu5czNIM1w"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                        ></iframe>
 
                         <p class="newest-post__p" id="yaboiii">
                             Bring a pot of salted water to a boil. Add potatoes
@@ -148,6 +127,13 @@
                         <a href="#" id="backToTop"> back to top </a>
                     </article>
                 </main>
+
+                <!-- this will be a grid of recent posts that will link to another page with anchor ref -->
+                <!-- <section class="recentPosts-grid">
+                    <div class="item-1">1</div>
+                    <div class="item-2">2</div>
+                    <div class="item-3">3</div>
+                </section> -->
             </section>
 
             <!-- grid item 3 /FOOTER-->

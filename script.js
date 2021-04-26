@@ -36,7 +36,7 @@ readMore.addEventListener("click", () => {
     if (hidden.classList.contains("show")) {
         readMore.style.display = "none";
         backToTop.style.display = "flex";
-        hidden.style.animation = "fadeIn 1s";
+        // hidden.style.animation = "fadeIn 5s";
     }
 });
 
