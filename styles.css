@@ -239,7 +239,7 @@ blockquote {
 
 .main-content__grid {
     display:grid;
-    grid-template-columns: minmax(200px, 250px) minmax(500px, 750px);
+    grid-template-columns: minmax(200px, 250px) minmax(500px, 700px);
     grid-template-rows: 1fr;
     grid-template-areas: "s a";
     /* background:var(--clr-dark); */
