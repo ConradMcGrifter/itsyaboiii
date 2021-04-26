@@ -1,0 +1,783 @@
+/* ===============
+                                                               
+
+                                                             1/HEADER - grid area: h
+
+                                                             2/MAIN CONTENT - grid area: c
+                                                                a) nav
+                                                                b) sidebar
+                                                                c) main content
+                                                             
+                                                             3/FOOTER - grid area: f
+
+                                                             4/ANIMATIONS
+                                                            -------------------
+                                                             5/MEDIA QUERIES
+                                                            -------------------
+                                                             6/LIGHT THEME
+
+                                                             404 PAGE
+
+                                                            =================*/
+
+:root {
+    --clr-primary: #3282a1;
+    --clr-accent: #316579;
+    --clr-nav: #0b1f25;
+    --clr-links: lightgoldenrodyellow;
+    --clr-links-secondary: lightskyblue;
+}
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    background: rgb(14, 14, 14);
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 2rem;
+    font-family: "Ubuntu", sans-serif;
+    letter-spacing: 0.05em;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    /* text-indent: 1.5em; */
+    line-height: 2;
+    font-size: 1.6rem;
+    margin: 1em 0 1em 0;
+}
+
+h3 {
+    margin: 0 0 2em 0;
+    font-weight: 400;
+    font-size: 1.8rem;
+
+    color: var(--clr-links);
+}
+
+blockquote {
+    line-height: 1.4;
+    font-size: 2rem;
+    font-style: italic;
+    background: rgba(0, 0, 0, 0.582);
+    padding: 1em;
+    animation: fadeIn 3s;
+}
+
+/* main grid for the website layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 125px auto 125px;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "c c c c c c c c c c c c"
+        "f f f f f f f f f f f f";
+    color: white;
+    height: 100vh;
+}
+
+/* =======================
+                                                                 HEADER - grid area: h
+                                                                =======================*/
+
+.grid-item-1 {
+    grid-area: h;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    background: rgb(4, 4, 4);
+}
+
+.header__logo {
+    height: 100%;
+    width: 100px;
+}
+
+.header__logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* =============================
+                                                                main content - grid area: c
+                                                                =============================*/
+
+.main-grid {
+    grid-area: c;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(0, 0, 0), rgba(10, 10, 10, 0.877)),
+        url(images/carbonfiber.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    display: grid;
+    grid-column-gap: 1em;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 50px auto;
+    grid-template-areas:
+        " n n n "
+        " s a . ";
+
+    padding-bottom: 2em;
+}
+
+/* ///////////
+                                              a)  navbar
+                                             //////////// */
+
+.navbar {
+    grid-area: n;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: var(--clr-nav);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 0.3em;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.616);
+    transition: 0.5s;
+}
+
+#hamburger {
+    display: none;
+}
+
+/* this moves the theme icon to the left side of the navbar on desktop */
+.theme {
+    position: absolute;
+    z-index: 999;
+    left: 150px;
+}
+
+.navbar__ul {
+    display: flex;
+    width: 800px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0.25em;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* these are the IDs for the theme/mode icon */
+#modeToggleDesktop {
+    color: var(--clr-links-secondary);
+    cursor: pointer;
+    transition: 1s;
+}
+
+#modeToggleDesktop.light-theme {
+    color: var(--clr-links);
+    transform: rotate(180deg);
+}
+
+.navbar__ul a {
+    color: var(--clr-links);
+    transition: 0.5s;
+}
+
+.navbar__ul a:hover {
+    color: rgb(179, 65, 255);
+}
+
+/*======== 
+                                                     b)SIDEBAR
+                                                    ///////////*/
+
+.main__sidebar {
+    margin-top: 1em;
+    /* margin-bottom:1em; */
+    width: 100%;
+
+    /* background:rgba(240, 0, 0, 0.5); */
+    grid-area: s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__sidebar-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--clr-nav);
+    /* position:sticky; */
+    border-radius: 0 5px 5px 0;
+    margin-top: 1em;
+
+    top: 75px;
+}
+
+.sidebar__h3 {
+    font-size: 2.2rem;
+    margin: 0.5em 0 0 0;
+}
+
+.sidebar__item-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1em 0 1em;
+}
+
+.sidebar__item {
+    width: 100%;
+    height: 200px;
+    background: rgba(238, 236, 228, 0.178);
+    margin: 1em 0 1em 0;
+    border-radius: 5px;
+}
+
+/*////////////// 
+                                                c) MAIN ARTICLE 
+                                                ///////////////*/
+/* this is the main section that wraps the article */
+.post-container {
+    grid-area: a;
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.newest-post {
+    height: 100%;
+    width: 70ch;
+    background: rgb(33, 33, 33);
+    padding: 3em;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.589);
+    border-radius: 5px;
+}
+
+.newest-post__p {
+    margin-top: 2em;
+}
+
+/* sticky navbar for desktop*/
+
+#sticky-navbar {
+    display: flex;
+}
+
+/* #mobile-navbar {
+    display: none;
+} */
+
+.newest-post__h2 {
+    font-size: 4rem;
+    margin: 0 0 0.5em 0;
+}
+
+.newest-post__h3 {
+    color: var(--clr-primary);
+}
+
+/* .newest-post iframe {
+    width: 100%;
+    
+   
+} */
+
+.iframe-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* this is the read more button that expands the newest post if clicked */
+#newest-post__button {
+    cursor: pointer;
+    border: solid var(--clr-primary) 2px;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 999px;
+    text-decoration: none;
+    color: var(--clr-primary);
+    transition: 0.25s;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+#newest-post__button:hover {
+    color: white;
+
+    background: var(--clr-primary);
+}
+
+/* when the "read more" button is clicked, the .show class is toggled on or off */
+.newest-post--hidden {
+    display: none;
+}
+
+.newest-post--hidden.show {
+    display: block;
+}
+
+.newest-post--hidden.show p {
+    animation: fadeIn 3s;
+}
+
+/* this is the link at the bottom of the newest post that closes the article and sends you to top of page */
+#backToTop {
+    display: none;
+    cursor: pointer;
+
+    text-align: center;
+    padding: 0.25em;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #3282a1;
+    transition: 0.25s;
+
+    justify-content: center;
+    width: 19%;
+    margin: auto;
+}
+
+#backToTop:hover {
+    color: white;
+}
+
+/* ========================
+                                                               footer - grid area: f
+                                                             ========================*/
+
+.grid-item-3 {
+    grid-area: f;
+
+    background: var(--clr-nav);
+}
+
+.footer {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 225px;
+}
+
+i {
+    color: white;
+    /* transform: scale(200%); */
+    transition: 0.25s;
+}
+
+i:hover {
+    /* transform: scale(230%); */
+    color: var(--clr-primary);
+}
+
+/*========= 
+                                                                   animations 
+                                                                 =============*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        left: -300px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+/* ==============
+                                                                  media queries
+                                                                 ================ */
+
+@media only screen and (max-width: 1500px) {
+    .newest-post {
+        width: 100%;
+        margin-right: 1em;
+    }
+
+    .main-grid {
+        grid-column-gap: 1em;
+        grid-template-columns: 1fr 3fr 0.25fr;
+        grid-template-rows: 50px auto;
+        grid-template-areas:
+            " n n n "
+            " s a . ";
+    }
+
+    .navbar__ul {
+        width: 60%;
+    }
+
+    .post-container {
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .navbar {
+        display: none;
+        width: auto;
+        justify-content: center;
+        position: fixed;
+
+        z-index: 999;
+        color: var(--clr-links);
+        padding: 0.1em;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.644);
+        border-radius: 0 2px 2px 0;
+        transition: 0.5s;
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "a"
+            "s";
+        grid-gap: 2em;
+    }
+
+    .newest-post {
+        width: 85%;
+        margin: 0;
+    }
+
+    .sidebar__item-wrap {
+        width: 100%;
+        padding: 1em;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sidebar__item {
+        margin: 0.5em;
+    }
+
+    .main__sidebar-wrap {
+        width: 85%;
+        border-radius: 5px;
+    }
+
+    .post-container {
+        justify-content: center;
+    }
+
+    /* hides the desktop navbar  */
+    /* #sticky-navbar {
+        display: none;
+    } */
+
+    /* shows the mobile hamburger navbar */
+    /* #mobile-navbar {
+        display: flex;
+    } */
+
+    /* this moves the theme picker icon back into the normal document flow */
+    .theme {
+        position: initial;
+    }
+
+    .newest-post {
+        padding: 1em;
+    }
+
+    /* this is the navbar for mobile that gets revealed when switching to mobile sizes */
+    .navbar__ul.reveal {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-right: 1.5em;
+        text-align: center;
+    }
+
+    .navbar__ul {
+        display: none;
+        height: 70%;
+        margin-top: 5em;
+    }
+
+    #sticky-navbar.reveal {
+        /* this keeps the sidebar in place when revealed */
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        animation: slideIn 0.25s;
+    }
+
+    #hamburger.reveal {
+        top: 5px;
+        right: -225px;
+        height: 50px;
+        color: white;
+    }
+
+    /* hamburger is revealed */
+    /* #hamburger {
+        display: block;
+        position: relative;
+        color: white;
+        right: 0;
+        cursor: pointer;
+    } */
+
+    #hamburger {
+        display: block;
+        position: relative;
+        color: white;
+        padding: 0.25em;
+        cursor: pointer;
+    }
+
+    .darken {
+        background: rgba(0, 0, 0, 0.65);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        animation: fadeIn 0.5s;
+        height: 100%;
+        width: 100%;
+    }
+
+    #backToTop {
+        margin: initial;
+        width: 100%;
+    }
+}
+
+/* 
+                                                        media queries for iphone 8 / 9 / 10  
+*/
+@media only screen and (max-width: 600px) {
+    .sidebar__h3 {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .main-grid {
+        grid-gap: 0.5em;
+    }
+
+    .newest-post {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .main__sidebar-wrap {
+        width: 100%;
+    }
+
+    .sidebar__item {
+        margin: 0 0 1em 0;
+        width: 100%;
+        height: 200px;
+    }
+
+    .sidebar__item-wrap {
+        flex-direction: column;
+        padding-bottom: 1em;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 125px auto 125px;
+    }
+
+    p {
+        font-size: 1.6rem;
+        line-height: 2;
+    }
+
+    .post-container {
+        padding: 0;
+        margin: 0;
+    }
+    .newest-post {
+        margin-top: 0;
+        padding: 0.75em;
+    }
+    .newest-post__h2 {
+        font-size: 2.2rem;
+        margin: 1em 0 0.5em 0;
+    }
+
+    .newest-post iframe {
+        height: 200px;
+        width: 100%;
+    }
+
+    blockquote {
+        font-size: 1.5rem;
+        margin: 0.5em;
+    }
+
+    .header {
+        background: rgb(4, 4, 4);
+    }
+    .header__logo {
+        background: rgb(4, 4, 4);
+    }
+
+    .header {
+        background: linear-gradient(
+                rgba(0, 0, 0, 0.712),
+                rgba(10, 10, 10, 0.877)
+            ),
+            url(images/carbonfiber.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .header__logo {
+        background: none;
+    }
+}
+
+/*=============
+                                                      light theme 
+                                                     ============= */
+
+.nav__li.light-theme {
+    color: red;
+}
+
+.grid-item-2.light-theme {
+    grid-area: c;
+    height: 100%;
+    background: linear-gradient(
+            rgba(255, 255, 255, 0.911),
+            rgba(255, 255, 255, 0.808)
+        ),
+        url(images/carbonfiber.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navbar.light-theme {
+    background: var(--clr-accent);
+
+    /* color: var(--clr-links); */
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.466);
+    border-radius: 0 2px 2px 0;
+    transition: 0.25s;
+}
+
+.header.light-theme {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(
+            rgba(50, 129, 161, 0.822),
+            rgba(50, 129, 161, 0.692)
+        ),
+        url(images/carbonfiber.png);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header__logo.light-theme {
+    height: 100%;
+    width: 100px;
+    background: var(--clr-primary);
+}
+
+.newest-post.light-theme {
+    background: rgba(238, 236, 228, 0.815);
+    color: rgb(7, 7, 7);
+}
+
+.newest-post.light-theme h3 {
+    color: purple;
+}
+
+.newest-post.light-theme blockquote {
+    color: white;
+}
+
+.footer.light-theme {
+    background: var(--clr-accent);
+}
+
+.error-message.light-theme {
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========
+                                                 404 page 
+                                                ==========*/
+
+/* the styles for the exclamation icon are in the html */
+
+.error-message {
+    background: rgba(0, 0, 0, 0.897);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home {
+    margin-top: 1em;
+    font-size: 2.5rem;
+    color: rgb(248, 58, 0);
+}
