@@ -36,6 +36,7 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     scroll-behavior: smooth;
+   
 }
 
 * {
@@ -43,6 +44,7 @@ html {
 }
 
 body {
+    background-color:black;
     background: linear-gradient(
         rgba(0, 0, 0, 0.904),
         rgba(10, 10, 10, 0.925)
