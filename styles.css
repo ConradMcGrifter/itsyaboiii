@@ -216,7 +216,7 @@ blockquote {
 
 .navbar__ul {
     display: flex;
-    width: 550px;
+    width: 450px;
     justify-content: space-between;
     align-items: center;
     margin: 0.25em;
@@ -688,6 +688,15 @@ i:hover {
         margin:.5em;
     
   }
+
+  .sidebar__h3 {
+    /* color:var(--clr-accent); */
+   
+    text-align: start;
+    padding:1em 0 0 .75em;
+       
+}
+
     .main-content__grid {
         margin:0;
     }
