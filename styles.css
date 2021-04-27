@@ -1,32 +1,27 @@
 /* ===============
                                                                
 
-                                                             1/HEADER - grid area: h
-
-                                                             2/MAIN CONTENT - grid area: c
-                                                                a) nav
-                                                                b) sidebar
-                                                                c) main content
-                                                             
-                                                             3/FOOTER - grid area: f
-
-                                                             4/ANIMATIONS
-                                                            -------------------
-                                                             5/MEDIA QUERIES
-                                                            -------------------
-                                                             6/LIGHT THEME
-
-                                                             404 PAGE
+                                                 
 
                                                             =================*/
 
 :root {
     --clr-primary: #3282a1;
-    --clr-accent: #316579;
+    --clr-accent: #229ccc;
     --clr-nav: #0b1f25;
-    --clr-links: lightgoldenrodyellow;
-    --clr-links-secondary: lightskyblue;
-    --clr-dark: rgb(33,33,33);
+    --clr-highlight: lightgoldenrodyellow;
+    --clr-links: lightskyblue;
+    --clr-content-bg: rgb(33,33,33);
+    --clr-background: rgb(15,15,15);
+
+    /* second color scheme */
+    /* --clr-primary: #bea0d3;
+    --clr-accent: #229ccc;
+    --clr-nav: #201925;
+    --clr-highlight: lightgoldenrodyellow;
+    --clr-links: #61baad;
+    --clr-content-bg: rgb(33,33,33);
+    --clr-background: rgb(15,15,15); */
 }
 
 html {
@@ -74,14 +69,11 @@ h2,
 h3 {
     margin:0;
     font-weight: 400;
+    color: var(--clr-highlight);
 }
 
 h3 {
-    
-    
     font-size: 1.8rem;
-
-   
 }
 
 blockquote {
@@ -106,7 +98,7 @@ blockquote {
   }
 /* this are the grid items */
   .grid-container__header {
-    background:rgb(15,15,15);
+    background:var(--clr-background);
     /* background: linear-gradient(
         rgba(0, 0, 0, 0.712),
         rgba(10, 10, 10, 0.877)
@@ -122,7 +114,7 @@ blockquote {
   }
   
   .grid-container__main-content {
-      background:rgb(15,15,15);
+      background:var(--clr-background);
     /* background: linear-gradient(
         rgba(0, 0, 0, 0.904),
         rgba(10, 10, 10, 0.925)
@@ -218,7 +210,8 @@ blockquote {
 
 .navbar__ul {
     display: flex;
-    width: 500px;
+    width: 50%;
+    max-width:700px;
     justify-content: space-between;
     align-items: center;
     margin: 0.25em;
@@ -228,18 +221,18 @@ blockquote {
 
 /* these are the IDs for the theme/mode icon */
 #modeToggleDesktop {
-    color: var(--clr-links-secondary);
+    color: var(--clr-links);
     cursor: pointer;
     transition: 1s;
 }
 
 #modeToggleDesktop.light-theme {
-    color: var(--clr-links);
+    color: var(--clr-highlight);
     transform: rotate(180deg);
 }
 
 .navbar__ul a {
-    color: var(--clr-links-secondary);
+    color: var(--clr-links);
     transition: 0.5s;
 }
 
@@ -256,9 +249,9 @@ blockquote {
 
 .main-content__grid {
     display:grid;
-    grid-template-columns: minmax(200px, 250px) minmax(500px, 800px);
+    grid-template-columns: minmax(200px, 250px) minmax(500px, 800px)  minmax(200px, 250px);
     grid-template-rows: 1fr;
-    grid-template-areas: "s a";
+    grid-template-areas: "s a .";
     /* background:var(--clr-dark); */
     width:auto; 
     margin:2em;
@@ -276,7 +269,7 @@ blockquote {
   }
 
   .sidebar__h3 {
-    color:white;
+    
     font-weight:400;
     text-align: center;
     padding:1em 0 0 0;
@@ -286,9 +279,9 @@ blockquote {
 
   .sidebar-wrap {
   
-    /* position:sticky;
-    top:0; */
-    background:var(--clr-dark);
+    position:sticky;
+    top:1em;
+    background:var(--clr-content-bg);
     padding: .5em;
   }
 
@@ -302,7 +295,7 @@ blockquote {
   }
   
   .sidebar__item {
-    height:200px;
+    /* height:200px; */
     width:100%;
     background:var(--clr-nav);
     margin-top:1em;
@@ -343,7 +336,7 @@ blockquote {
 }
 
 .newest-post__h3 {
-    color: var(--clr-primary);
+    color: var(--clr-links);
 }
 
 /* .newest-post iframe {
@@ -356,12 +349,12 @@ blockquote {
 /* this is the read more button that expands the newest post if clicked */
 #newest-post__button {
     cursor: pointer;
-    border: solid var(--clr-primary) 2px;
+    border: solid var(--clr-links) 2px;
     text-align: center;
     padding: 0.5em;
     border-radius: 999px;
     text-decoration: none;
-    color: var(--clr-primary);
+    color: var(--clr-links);
     transition: 0.25s;
     display: flex;
     justify-content: center;
@@ -372,7 +365,7 @@ blockquote {
 #newest-post__button:hover {
     color: white;
 
-    background: var(--clr-primary);
+    background: var(--clr-links);
 }
 
 /* when the "read more" button is clicked, the .show class is toggled on or off */
@@ -391,12 +384,12 @@ blockquote {
 /* this is the link at the bottom of the newest post that closes the article and sends you to top of page */
 #backToTop {
     cursor: pointer;
-    border: solid var(--clr-primary) 2px;
+    border: solid var(--clr-links) 2px;
     text-align: center;
     padding: 0.5em;
     border-radius: 999px;
     text-decoration: none;
-    color: var(--clr-primary);
+    color: var(--clr-links);
     transition: 0.25s;
     display: none;
     justify-content: center;
@@ -407,14 +400,14 @@ blockquote {
 #backToTop:hover {
     color: white;
 
-    background: var(--clr-primary);
+    background: var(--clr-links);
 }
   
   
   
   .main-content__article {
     grid-area: a;
-    background:var(--clr-dark);
+    background:var(--clr-content-bg);
     padding:1em 2em 1em 2em;
     
     
@@ -466,6 +459,15 @@ i:hover {
     color: var(--clr-primary);
 }
   
+
+    @media only screen and (max-width:1200px) {
+        .main-content__grid {
+            display:grid;
+            grid-template-columns: minmax(200px, 250px) minmax(500px, 800px);
+            grid-template-rows: 1fr;
+            grid-template-areas: "s a";
+          }
+    }
   
 
   
@@ -508,7 +510,7 @@ i:hover {
   .main-content__sidebar {
     grid-area: s;
     /* background:rgb(20,20,20); */
-    background:var(--clr-dark);
+    background:var(--clr-content-bg);
     padding:0;
   /*   display:flex;
     flex-direction:column; */
@@ -545,7 +547,7 @@ i:hover {
         position:sticky;
 
         z-index: 999;
-        color: var(--clr-links);
+        color: var(--clr-highlight);
         padding: 0.1em;
         /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.644); */
        
