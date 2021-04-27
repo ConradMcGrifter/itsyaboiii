@@ -624,8 +624,8 @@ i:hover {
     }
 
     #hamburger.reveal {
-        top: 45px;
-        right: -225px;
+        /* top: 45px; */
+        right: -260px;
         height: 50px;
         color: white;
     }
