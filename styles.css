@@ -102,7 +102,7 @@ blockquote {
     height:100%;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 150px auto 100px;
+    grid-template-rows: 125px auto 100px;
   }
 /* this are the grid items */
   .grid-container__header {
