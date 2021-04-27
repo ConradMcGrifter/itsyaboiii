@@ -237,7 +237,7 @@ blockquote {
 }
 
 .navbar__ul a:hover {
-    color: rgb(179, 65, 255);
+    color:var(--clr-highlight);
 }
 
 
@@ -621,7 +621,7 @@ i:hover {
     .navbar__ul {
         display: none;
         height: 70%;
-        margin-top: 5em;
+        /* margin-top: 5em; */
     }
 
     #sticky-navbar.reveal {
