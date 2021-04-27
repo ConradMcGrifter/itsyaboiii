@@ -73,7 +73,7 @@ h1,
 h2,
 h3 {
     margin:0;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 h3 {
@@ -324,7 +324,7 @@ blockquote {
 }
 
 .newest-post__p {
-    margin-top: 1em;
+    margin: 1em 0 0 0;
 }
 
 /* sticky navbar for desktop*/
@@ -478,7 +478,7 @@ i:hover {
                          "s";
     background:none;
     margin:1em;
-    grid-gap:.5em;
+    grid-gap:1em;
   
   }
 
@@ -672,6 +672,10 @@ i:hover {
     #backToTop {
         margin: initial;
         width: 100%;
+    }
+
+    #newest-post__button{
+        margin:1em 0 1em 0;
     }
    
   }
