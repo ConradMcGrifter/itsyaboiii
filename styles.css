@@ -58,7 +58,7 @@ body {
 
 a {
     text-decoration: none;
-    font-size:1.5rem;
+    font-size:1.6rem;
 }
 
 p {
@@ -106,7 +106,8 @@ blockquote {
   }
 /* this are the grid items */
   .grid-container__header {
-    background: linear-gradient(
+    background:rgb(15,15,15);
+    /* background: linear-gradient(
         rgba(0, 0, 0, 0.712),
         rgba(10, 10, 10, 0.877)
     ),
@@ -114,14 +115,14 @@ blockquote {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: fixed; */
     display: flex;
     justify-content: center;
     
   }
   
   .grid-container__main-content {
-      background:rgb(15,15,15)
+      background:rgb(15,15,15);
     /* background: linear-gradient(
         rgba(0, 0, 0, 0.904),
         rgba(10, 10, 10, 0.925)
@@ -134,7 +135,8 @@ blockquote {
   }
   
   .grid-container__footer {
-    background:var(--clr-nav);
+    background: var(--clr-nav);
+
   }
   
 
@@ -144,7 +146,7 @@ blockquote {
     width:100%;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    /* justify-content:center; */
     align-items:center;
     /* this makes all the text white */
     color:white;
@@ -216,7 +218,7 @@ blockquote {
 
 .navbar__ul {
     display: flex;
-    width: 450px;
+    width: 500px;
     justify-content: space-between;
     align-items: center;
     margin: 0.25em;
