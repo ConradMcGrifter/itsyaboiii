@@ -342,7 +342,7 @@ this is the inner grid that holds the main article and sidebar
 }
 
 .newest-post__h3 {
-    color: var(--clr-links);
+    color: var(--clr-primary);
 }
 
 .newest-post iframe {
@@ -677,7 +677,7 @@ i:hover {
         margin: 0.5em;
     }
 
-    .grid-container__header {
+    /* .grid-container__header {
         background: linear-gradient(
                 rgba(0, 0, 0, 0.712),
                 rgba(10, 10, 10, 0.877)
@@ -687,7 +687,7 @@ i:hover {
         background-repeat: no-repeat;
         background-position: center;
         background-attachment: fixed;
-    }
+    } */
 
     .title-wrap {
         text-align: unset;
