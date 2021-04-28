@@ -24,8 +24,8 @@
     --clr-background: rgb(15, 15, 15);
     --clr-text: white;
     --linear-gradient: linear-gradient(
-        rgba(0, 0, 0, 0.884),
-        rgba(10, 10, 10, 0.877)
+        rgba(15, 15, 15, 0.945),
+        rgba(15, 15, 15, 0.705)
     );
     /* other color scheme */
     /* --clr-primary: #bea0d3;
@@ -38,17 +38,17 @@
 }
 
 .lightmode {
-    --clr-primary: #3282a1;
+    --clr-primary: rgb(50, 130, 161);
     --clr-accent: #229ccc;
-    --clr-nav: #229ccc;
+    --clr-nav: #197497;
     --clr-highlight: rgb(34, 34, 34);
     --clr-links: #ffffff;
     --clr-content-bg: rgb(255, 255, 255);
     --clr-background: rgb(206, 206, 206);
     --clr-text: rgb(14, 14, 14);
     --linear-gradient: linear-gradient(
-        rgba(255, 255, 255, 0.712),
-        rgba(255, 255, 255, 0.877)
+        rgba(50, 129, 161, 0.904),
+        rgba(50, 130, 161, 0.877)
     );
 }
 
@@ -131,6 +131,7 @@ blockquote {
     background-attachment: fixed;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 /* main content - this is the grid item / flex container that holds the navbar and grid for sidebar / main article 
@@ -183,8 +184,12 @@ this is the inner grid that holds the main article and sidebar
                                                 ///////////// */
 
 .header__logo {
-    height: 100%;
+    
+    height: 100px;
     width: 100px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header__logo img {
