@@ -21,7 +21,7 @@ const content = document.getElementById("content");
 const newestPost = document.getElementById("newest-post");
 const footer = document.getElementById("footer");
 const errorBg = document.getElementById("error");
-// this is the icon to toggle the theme 
+// this is the icon to toggle the theme
 const toggleDesktop = document.getElementById("modeToggleDesktop");
 
 //
@@ -79,32 +79,10 @@ function sidebar() {
 
 let lightMode = localStorage.getItem("lightMode");
 const enableLightMode = () => {
-    header.classList.add("light-theme");
-    body.classList.add("light-theme");
-    stickyNavbar.classList.add("light-theme");
-    content.classList.add("light-theme");
-    newestPost.classList.add("light-theme");
-    footer.classList.add("light-theme");
-    // mobileNavbar.classList.add("light-theme");
-    // toggleMobile.classList.add("light-theme");
-    toggleDesktop.classList.add("light-theme");
-    errorBg.classList.add("light-theme");
-
     localStorage.setItem("lightMode", "enabled");
 };
 
 const disableLightMode = () => {
-    header.classList.remove("light-theme");
-    body.classList.remove("light-theme");
-    stickyNavbar.classList.remove("light-theme");
-    content.classList.remove("light-theme");
-    newestPost.classList.remove("light-theme");
-    footer.classList.remove("light-theme");
-    // mobileNavbar.classList.remove("light-theme");
-    // toggleMobile.classList.remove("light-theme");
-    toggleDesktop.classList.remove("light-theme");
-    errorBg.classList.remove("light-theme");
-
     localStorage.setItem("lightMode", null);
 };
 
@@ -121,4 +99,3 @@ toggleDesktop.addEventListener("click", () => {
         disableLightMode();
     }
 });
-
