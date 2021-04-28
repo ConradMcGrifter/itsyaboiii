@@ -22,7 +22,7 @@ const newestPost = document.getElementById("newest-post");
 const footer = document.getElementById("footer");
 const errorBg = document.getElementById("error");
 // this is the icon to toggle the theme
-const toggleDesktop = document.getElementById("modeToggleDesktop");
+const modeToggle = document.getElementById("modeToggle");
 
 //
 //                                   event listeners
@@ -62,9 +62,9 @@ function sidebar() {
     // the reveal class makes the mobile nav menu visible by moving elements into view and changing the display
     hamburger.classList.toggle("reveal");
     stickyNavbar.classList.toggle("reveal");
-    // mobileNavbar.classList.toggle("reveal");
+
     navbarDesktop.classList.toggle("reveal");
-    // navbarMobile.classList.toggle("reveal");
+
     darken.classList.toggle("darken");
     if (hamburger.classList.contains("reveal")) {
         body.style.overflow = "hidden";
@@ -79,10 +79,13 @@ function sidebar() {
 
 let lightMode = localStorage.getItem("lightMode");
 const enableLightMode = () => {
+    // add class lightmode to body
+    body.classList.add("lightmode");
     localStorage.setItem("lightMode", "enabled");
 };
 
 const disableLightMode = () => {
+    body.classList.remove("lightmode");
     localStorage.setItem("lightMode", null);
 };
 
@@ -90,11 +93,10 @@ if (lightMode === "enabled") {
     enableLightMode();
 }
 
-toggleDesktop.addEventListener("click", () => {
+modeToggle.addEventListener("click", () => {
     lightMode = localStorage.getItem("lightMode");
     if (lightMode !== "enabled") {
         enableLightMode();
-        document;
     } else {
         disableLightMode();
     }
