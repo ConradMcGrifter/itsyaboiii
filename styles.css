@@ -1,13 +1,13 @@
 /* ===============
-                                                               HEADER
+                                                               1) HEADER
 
-                                                               NAVBAR
+                                                               2) NAVBAR
 
-                                                               SIDEBAR
+                                                               3) SIDEBAR - grid area s
 
-                                                               MAINCONTENT
+                                                               4) MAINCONTENT - grid area a
 
-                                                               FOOTER
+                                                               5) FOOTER
                                                                --------------
                                                                media queries
 
@@ -194,9 +194,8 @@ this is the inner grid that holds the main article and sidebar
      top:0; */
 }
 
-/* this is the grid area for the navbar - grid area n */
+/* this is the navbar - it sits outside of the inner grid but inside the main content grid item. it is only sticky for mobile size */
 .sticky-nav {
-    grid-area: n;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -208,10 +207,6 @@ this is the inner grid that holds the main article and sidebar
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.616);
     /* transition: 0.5s; */
 }
-
-/* #sticky-navbar {
-    display: flex;
-} */
 
 #hamburger {
     display: none;
@@ -498,7 +493,7 @@ i:hover {
         margin: 0.5em;
     }
 
-    /* import */
+    /* sticky nav for mobile */
     .sticky-nav {
         display: flex;
         width: 100%;
