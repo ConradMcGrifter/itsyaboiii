@@ -280,7 +280,7 @@ this is the inner grid that holds the main article and sidebar
 /* this wraps the sidebar title and items */
 .sidebar-wrap {
     position: sticky;
-    top: 1em;
+    top: 0;
     background: rgba(33, 33, 33, 0.5);
     padding: 0.5em;
     border-radius: 5px;
