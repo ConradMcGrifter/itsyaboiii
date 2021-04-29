@@ -47,8 +47,8 @@
     --clr-background: rgb(206, 206, 206);
     --clr-text: rgb(14, 14, 14);
     --linear-gradient: linear-gradient(
-        rgba(50, 129, 161, 0.904),
-        rgba(50, 130, 161, 0.877)
+        rgba(50, 129, 161, 0.781),
+        rgba(50, 129, 161, 0.726)
     );
 }
 
@@ -105,7 +105,7 @@ blockquote {
     line-height: 1.4;
     font-size: 2rem;
     font-style: italic;
-    background: rgba(0, 0, 0, 0.582);
+    background: var(--clr-background);
     padding: 1em;
     margin: 0;
     animation: fadeIn 3s;
@@ -286,7 +286,7 @@ this is the inner grid that holds the main article and sidebar
 .sidebar__h3 {
     font-weight: 400;
     text-align: center;
-    padding: 1em 0 0 0;
+    /* padding: 1em 0 0 0; */
     font-size: 2rem;
 }
 
