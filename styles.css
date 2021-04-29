@@ -774,13 +774,10 @@ i:hover {
         flex-direction: column;
     }
     to {
-        position: fixed;
-        width: 300px;
-        height: 100%;
+        
         top: 0;
         left: -300px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        height:100%;
+      
     }
 }
