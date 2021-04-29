@@ -239,7 +239,7 @@ this is the inner grid that holds the main article and sidebar
 }
 
 #close {
-    visibility: hidden;
+    display:none;
 }
 
 .navbar__ul {
@@ -616,16 +616,10 @@ i:hover {
     }
     
 
-    #close {
-        top:15px;
-        right: -125px;
-        height: 35px;
-        width:35px;
-        position: relative;
-    }
+
 
     #close.reveal {
-        visibility: visible;
+        
         display:block;
         top:15px;
         right: -125px;
@@ -762,6 +756,7 @@ i:hover {
     }
 }
 
+
 @keyframes slideIn {
     from {
         left: -300px;
@@ -784,14 +779,13 @@ i:hover {
     }
     to {
         
+        display:none;
         position: fixed;
         width: 300px;
         height: 100%;
         top: 0;
         left: -300px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+      
       
     }
 }
