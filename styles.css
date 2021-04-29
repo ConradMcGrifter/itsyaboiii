@@ -599,6 +599,7 @@ i:hover {
     height:0;
     padding:0;
     animation: slideOut .5s;
+    display:block;
    }
 
     #hamburger.reveal {
