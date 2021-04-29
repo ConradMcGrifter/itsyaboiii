@@ -239,7 +239,7 @@ this is the inner grid that holds the main article and sidebar
 }
 
 #close {
-    display:none
+    visibility: hidden;
 }
 
 .navbar__ul {
@@ -617,7 +617,11 @@ i:hover {
     
 
     #close {
-        visibility: hidden;
+        top:15px;
+        right: -125px;
+        height: 35px;
+        width:35px;
+        position: relative;
     }
 
     #close.reveal {
@@ -627,7 +631,6 @@ i:hover {
         right: -125px;
         height: 35px;
         width:35px;
-        display: block;
         position: relative;
         color: white;
         text-align:center;
