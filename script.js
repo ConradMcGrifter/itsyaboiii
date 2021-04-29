@@ -60,7 +60,8 @@ document.getElementById("close").addEventListener("click", ()=> {
     stickyNavbar.classList.toggle("reveal");
     hamburger.classList.toggle("reveal");
     navbarDesktop.classList.toggle("reveal");
-    stickyNavbar.classList.toggle("close");
+    // stickyNavbar.classList.toggle("close");
+    stickyNavbar.style.animation = "slideOut .5s";
     darken.classList.toggle("darken");
     document.getElementById("close").classList.toggle("reveal");
 
@@ -78,7 +79,8 @@ function sidebar() {
     // the reveal class makes the mobile nav menu visible by moving elements into view and changing the display
     hamburger.classList.toggle("reveal");
     stickyNavbar.classList.toggle("reveal");
-    stickyNavbar.classList.remove("close");
+    stickyNavbar.style.animation = "slideIn .5s"
+    // stickyNavbar.classList.remove("close");
     navbarDesktop.classList.toggle("reveal");
     document.getElementById("close").classList.toggle("reveal");
 
