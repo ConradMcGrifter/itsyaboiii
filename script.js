@@ -55,6 +55,22 @@ hamburger.addEventListener("click", sidebar);
 // this lets you close the mobile menu by clicking on the darkened area that isnt the nav menu
 darken.addEventListener("click", sidebar);
 
+document.getElementById("close").addEventListener("click", ()=> {
+    
+    stickyNavbar.classList.toggle("reveal");
+    hamburger.classList.toggle("reveal");
+    navbarDesktop.classList.toggle("reveal");
+    stickyNavbar.classList.toggle("close");
+    darken.classList.toggle("darken");
+    document.getElementById("close").classList.toggle("reveal");
+
+    if (hamburger.classList.contains("reveal")) {
+        body.style.overflow = "hidden";
+    } else {
+        body.style.overflow = "";
+    }
+})
+
 // //                                       functions
 
 // this function open and closes the sidebar when hamburger is clicked
@@ -62,8 +78,9 @@ function sidebar() {
     // the reveal class makes the mobile nav menu visible by moving elements into view and changing the display
     hamburger.classList.toggle("reveal");
     stickyNavbar.classList.toggle("reveal");
-
+    stickyNavbar.classList.remove("close");
     navbarDesktop.classList.toggle("reveal");
+    document.getElementById("close").classList.toggle("reveal");
 
     darken.classList.toggle("darken");
     if (hamburger.classList.contains("reveal")) {
@@ -72,6 +89,8 @@ function sidebar() {
         body.style.overflow = "";
     }
 }
+
+
 
 //
 //                              theme choice save to local storage

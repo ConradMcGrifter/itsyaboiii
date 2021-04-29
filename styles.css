@@ -207,6 +207,7 @@ this is the inner grid that holds the main article and sidebar
     width: 100%;
     height: 37px;
     background: var(--clr-nav);
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.616);
     /* position:sticky;
      z-index:999;
      top:0; */
@@ -222,7 +223,7 @@ this is the inner grid that holds the main article and sidebar
     top: 0; */
     z-index: 999;
     padding: 0.3em;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.616);
+    /* box-shadow: 0 1px 5px rgba(0, 0, 0, 0.616); */
     /* transition: 0.5s; */
 }
 
@@ -235,6 +236,10 @@ this is the inner grid that holds the main article and sidebar
     position: absolute;
     z-index: 999;
     left: 50px;
+}
+
+#close {
+    display:none
 }
 
 .navbar__ul {
@@ -585,20 +590,55 @@ i:hover {
         animation: slideIn 0.25s;
     }
 
+   #sticky-navbar.close {
+    height:0;
+    padding:0;
+    animation: slideOut .25s;
+   }
+
     #hamburger.reveal {
-        /* top: 45px; */
-        right: -125px;
-        height: 50px;
+        display:none;
+        
+    }
+
+    #hamburger {
+        display: block;
+        position: relative;
         color: white;
+        padding: 0.25em;
+        cursor: pointer;
+        width:40px;
+    }
+    
+
+    #close {
+        display:none
+    }
+
+    #close.reveal {
+        display:block;
+        top:15px;
+        right: -125px;
+        height: 35px;
+        width:35px;
+        display: block;
+        position: relative;
+        color: white;
+        text-align:center;
+        cursor: pointer;
+       
     }
 
     .nav-wrap {
+        display:flex;
+        align-items: center;
         width: 100%;
-        height: 37px;
+        height: 35px;
         background: var(--clr-nav);
         position: sticky;
         z-index: 999;
         top: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.349);
     }
 
     /* hamburger is revealed */
@@ -610,13 +650,7 @@ i:hover {
         cursor: pointer;
     } */
 
-    #hamburger {
-        display: block;
-        position: relative;
-        color: white;
-        padding: 0.25em;
-        cursor: pointer;
-    }
+    
 
     .darken {
         background: rgba(0, 0, 0, 0.65);
@@ -725,5 +759,28 @@ i:hover {
     }
     to {
         left: 0;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    to {
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        top: 0;
+        left: -300px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 }
