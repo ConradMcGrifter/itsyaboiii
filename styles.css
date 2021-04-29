@@ -593,7 +593,7 @@ i:hover {
    #sticky-navbar.close {
     height:0;
     padding:0;
-    animation: slideOut .5s;
+    animation: slideOut linear .5s;
    }
 
     #hamburger.reveal {
@@ -775,9 +775,14 @@ i:hover {
     }
     to {
         
-       
-        height:100%;
-        width: 0px;
+        position: fixed;
+        width: 300px;
+        height: 100%;
+        top: 0;
+        left: -300px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
       
     }
 }
