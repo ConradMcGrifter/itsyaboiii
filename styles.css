@@ -257,7 +257,7 @@ this is the inner grid that holds the main article and sidebar
 #modeToggle {
     color: var(--clr-links);
     cursor: pointer;
-    transition: 1s;
+    /* transition: 1s; */
 }
 
 .navbar__ul a {
@@ -563,6 +563,7 @@ i:hover {
 
     /* this is the navbar for mobile that gets revealed when switching to mobile sizes */
     .navbar__ul.reveal {
+        
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -571,9 +572,13 @@ i:hover {
     }
 
     .navbar__ul {
-        display: none;
-        height: 70%;
+        display:none;
+        height: 75%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
         /* margin-top: 5em; */
+        
     }
 
     #sticky-navbar.reveal {
@@ -593,7 +598,7 @@ i:hover {
    #sticky-navbar.close {
     height:0;
     padding:0;
-    animation: slideOut linear .5s;
+    animation: slideOut .5s;
    }
 
     #hamburger.reveal {
@@ -612,10 +617,11 @@ i:hover {
     
 
     #close {
-        display:none
+        visibility: hidden;
     }
 
     #close.reveal {
+        visibility: visible;
         display:block;
         top:15px;
         right: -125px;
