@@ -330,6 +330,7 @@ this is the inner grid that holds the main article and sidebar
     justify-content: space-evenly;
     padding:.5em;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.274);
+    color:var(--clr-text);
     
 }
 
