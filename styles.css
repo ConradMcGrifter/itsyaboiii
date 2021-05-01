@@ -29,6 +29,9 @@
     );
     --clr-links-hover: rgb(190, 0, 190);
     --clr-sidebar-info:#0b1f25;
+    --clr-overlay-gradient: linear-gradient(
+        transparent,
+        rgba(33, 33, 33, 0.842));
     /* other color scheme */
     /* --clr-primary: #bea0d3;
     --clr-accent: #229ccc;
@@ -54,6 +57,9 @@
     );
     --clr-links-hover: rgb(114, 0, 114);
     --clr-sidebar-info:#1973977a;
+    --clr-overlay-gradient: linear-gradient(
+       transparent,
+        rgba(255, 255, 255, 0.719));
 }
 
 html {
@@ -389,6 +395,23 @@ this is the inner grid that holds the main article and sidebar
     margin: 0;
 }
 
+#newest-post__p--overlay {
+    background:var(--clr-overlay-gradient);
+    height:75%;
+    width:100%;
+    position:absolute;;
+    bottom:0;
+
+}
+
+#newest-post__p--overlay.hidden {
+    display:none;
+}
+
+.newest-post__p-wrap {
+    position:relative;
+}
+
 /* this wraps the newest post title + date */
 .title-wrap {
     text-align: start;
@@ -441,7 +464,7 @@ this is the inner grid that holds the main article and sidebar
     display: flex;
     justify-content: center;
     /* width: 100%; */
-    margin: 1em 0 1em 0;
+    margin: 1em 0 0 0;
 }
 
 #newest-post__button:hover {

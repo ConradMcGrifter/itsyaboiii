@@ -13,6 +13,7 @@ const navbarDesktop = document.getElementById("navbar__ul-desktop");
 // const navbarMobile = document.getElementById("navbar__ul-mobile");
 // this darkens the screen when mobile navbar is showing
 const darken = document.getElementById("darken");
+const overlay = document.getElementById("newest-post__p--overlay");
 //
 const body = document.getElementById("body");
 const logo = document.getElementById("logo");
@@ -31,6 +32,7 @@ const modeToggle = document.getElementById("modeToggle");
 readMore.addEventListener("click", () => {
     // this shows the rest of the most recent article when "read more" button is clicked
     hidden.classList.toggle("show");
+    overlay.classList.toggle("hidden");
 
     // this hides the read more button if the hidden content is showing
     if (hidden.classList.contains("show")) {
@@ -48,6 +50,7 @@ backToTop.addEventListener("click", () => {
     // this resets the "read more" button to be visible and hides the "back to top" button
     backToTop.style.display = "none";
     readMore.style.display = "flex";
+    overlay.classList.toggle("hidden");
     document.getElementById("header").scrollIntoView();
 });
 
