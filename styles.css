@@ -27,6 +27,8 @@
         rgba(15, 15, 15, 0.945),
         rgba(15, 15, 15, 0.705)
     );
+    --clr-links-hover: rgb(190, 0, 190);
+    --clr-sidebar-info:#0b1f25;
     /* other color scheme */
     /* --clr-primary: #bea0d3;
     --clr-accent: #229ccc;
@@ -50,6 +52,8 @@
         rgba(50, 129, 161, 0.781),
         rgba(50, 129, 161, 0.726)
     );
+    --clr-links-hover: rgb(114, 0, 114);
+    --clr-sidebar-info:#1973977a;
 }
 
 html {
@@ -91,7 +95,8 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     margin: 0;
     font-weight: 400;
     color: var(--clr-highlight);
@@ -266,7 +271,7 @@ this is the inner grid that holds the main article and sidebar
 }
 
 .navbar__ul a:hover {
-    color: var(--clr-highlight);
+    color: var(--clr-links-hover);
 }
 
 /* ///////////
@@ -293,7 +298,7 @@ this is the inner grid that holds the main article and sidebar
 /* this wraps the sidebar title and items */
 .sidebar-wrap {
     position: sticky;
-    top: 0;
+    top: 1em;
     background: var(--clr-content-bg);
     padding: 0.5em;
     border-radius: 5px;
@@ -307,10 +312,37 @@ this is the inner grid that holds the main article and sidebar
 }
 
 .sidebar__item {
-    /* height:200px; */
+    height:200px;
     width: 100%;
-    background: var(--clr-nav);
+    background: none;
     margin-top: 1em;
+    display:flex;
+    flex-direction:column;
+    border:solid 3px var(--clr-sidebar-info);
+}
+
+.sidebar__item-info {
+    width:100%;
+    height:75px;
+    background:var(--clr-sidebar-info);
+    display:flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+    padding:.5em;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.274);
+    
+}
+
+.item-info__p {
+    line-height:initial;
+    margin:.25em 0 0 0;
+    font-size:1.2rem;
+    
+}
+
+.item-info__h4 {
+    font-size:1.6rem;
+    color:var(--clr-highlight);
 }
 
 /* /////////////
@@ -392,7 +424,7 @@ this is the inner grid that holds the main article and sidebar
 
 #newest-post__button:hover {
     color: var(--clr-links);
-    border: solid var(--clr-primary);
+    border: solid var(--clr-primary) 2px;
     background: var(--clr-primary);
 }
 
@@ -414,7 +446,7 @@ this is the inner grid that holds the main article and sidebar
 
 #backToTop:hover {
     color: var(--clr-links);
-    border: solid var(--clr-primary);
+    border: solid var(--clr-primary) 2px;
     background: var(--clr-primary);
 }
 
@@ -508,7 +540,7 @@ i:hover {
     .sidebar__item {
         height: 200px;
         width: 200px;
-        background: var(--clr-nav);
+        background:none;
         margin: 0.5em;
     }
 
@@ -538,13 +570,19 @@ i:hover {
 
     .sidebar__item-wrap {
         width: 100%;
-        padding: 1em;
+        padding: .5em;
         display: flex;
         flex-direction: row;
     }
 
     .sidebar__item {
         margin: 0.5em;
+       width:100%;
+    }
+
+    .sidebar__item-info {
+        padding:.25em;
+        
     }
 
     .main__sidebar-wrap {
@@ -602,6 +640,7 @@ i:hover {
     display:block;
    }
 
+   /* this hides the hamburger when the nav menu on mobile is opened */
     #hamburger.reveal {
         display:none;
         
@@ -618,9 +657,8 @@ i:hover {
     
 
 
-
-    #close.reveal {
-        
+/* this reveals the X icon for the mobile navbar when it is opened */
+    #close.reveal { 
         display:block;
         top:15px;
         right: -125px;
