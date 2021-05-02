@@ -30,7 +30,7 @@
     --clr-links-hover: rgb(190, 0, 190);
     --clr-sidebar-info:#0b1f25;
     --clr-overlay-gradient: linear-gradient(
-        transparent,
+        rgba(33, 33, 33,0),
         rgba(33, 33, 33, 0.842));
     /* other color scheme */
     /* --clr-primary: #bea0d3;
@@ -58,7 +58,7 @@
     --clr-links-hover: rgb(114, 0, 114);
     --clr-sidebar-info:#1973977a;
     --clr-overlay-gradient: linear-gradient(
-       transparent,
+        rgba(255, 255, 255, 0),
         rgba(255, 255, 255, 0.719));
 }
 
