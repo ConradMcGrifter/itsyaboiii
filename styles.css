@@ -17,7 +17,7 @@
 :root {
     --clr-primary: #3282a1;
     --clr-accent: #229ccc;
-    --clr-nav: #0b1f25;
+    --clr-nav: #112f38;
     --clr-highlight: lightgoldenrodyellow;
     --clr-links: lightskyblue;
     --clr-content-bg: rgb(33, 33, 33);
@@ -28,7 +28,7 @@
         rgba(15, 15, 15, 0.705)
     );
     --clr-links-hover: rgb(190, 0, 190);
-    --clr-sidebar-info:#0b1f25;
+    --clr-sidebar-info:#112f38;
     --clr-overlay-gradient: linear-gradient(
         rgba(33, 33, 33,0),
         rgba(33, 33, 33, 0.842));
@@ -317,14 +317,14 @@ this is the inner grid that holds the main article and sidebar
     margin-top: 1em;
     display:flex;
     flex-direction:column;
-    border:solid 3px var(--clr-sidebar-info);
+    border:solid 1px var(--clr-background);
     transition:.5s;
 }
 
 
 .sidebar__item:hover {
    
-    border:solid 3px var(--clr-highlight);
+    border:solid 1px var(--clr-highlight);
 }
 
 .sidebar__item-info {
@@ -352,7 +352,7 @@ this is the inner grid that holds the main article and sidebar
     color:var(--clr-highlight);
 }
 
-.more-posts {
+.sidebar__upcoming {
     background:var(--clr-content-bg);    
     width:100%;
     margin: 1em 0;
@@ -364,12 +364,16 @@ this is the inner grid that holds the main article and sidebar
     border-radius:5px;
 }
 
-.more-posts p {
+.upcoming__p{
     margin:0;
     font-style: italic;
     font-size:1.4rem;
 }
 
+.upcoming__h3 {
+    font-size:2rem;
+}
+ 
 /* /////////////
                                                 MAIN CONTENT
                                               ////////////// */
@@ -541,6 +545,22 @@ i:hover {
 }
 
 @media only screen and (max-width: 900px) {
+   
+    .sidebar__upcoming {
+        height:100px;
+        
+    }
+
+    .upcoming__p {
+        font-size:1.6rem;
+    }
+
+    
+
+   
+   
+   
+   
     /* this switches the main content grid to s single column with the sidebar underneath the main content  */
     .main-content__grid {
         display: grid;
@@ -764,11 +784,12 @@ i:hover {
 }
 
 @media only screen and (max-width: 750px) {
-    
+
+ 
     
     /* this makes it so the hover effect is canceled out for mobile */
     .sidebar__item:hover {
-        border:solid 3px var(--clr-sidebar-info);
+        border:solid 1px var(--clr-sidebar-info);
     }
     
     .sidebar__item-wrap {
