@@ -106,7 +106,7 @@ h3 {
 }
 
 blockquote {
-    line-height: 1.4;
+    line-height: 1.6;
     font-size: 2rem;
     font-style: italic;
     background: var(--clr-background);
@@ -401,6 +401,16 @@ this is the inner grid that holds the main article and sidebar
     margin: 0;
 }
 
+.newest-post__img {
+    
+    /* this max-width keeps the video from stretching to fill the space */
+    max-width: 500px;
+    /* this width allows the video to shrink when the container gets smaller */
+    width: 100%;
+    margin: 1em 0 1em 0;
+    object-fit: cover;
+}
+
 #newest-post__p--overlay {
     background:var(--clr-overlay-gradient);
     height:75%;
@@ -433,7 +443,7 @@ this is the inner grid that holds the main article and sidebar
 }
 
 .newest-post iframe {
-    margin: 1em 0 1em 0;
+    margin: 1em 0;
     /* this max-width keeps the video from stretching to fill the space */
     max-width: 560px;
     /* this width allows the video to shrink when the container gets smaller */
@@ -823,7 +833,7 @@ i:hover {
     }
 
     blockquote {
-        font-size: 1.5rem;
+        font-size: 2rem;
         margin: 0.5em;
     }
 
@@ -853,6 +863,13 @@ i:hover {
 @media only screen and (max-width: 414px) {
     .newest-post iframe {
         height: 200px;
+    }
+}
+
+/* this media query is to make the padding on the sides slightly smaller for smaller mobile screens to fit more text in a line */
+@media only screen and (max-width:375px) {
+    .newest-post__content-wrap {
+        padding:.75em;
     }
 }
 
