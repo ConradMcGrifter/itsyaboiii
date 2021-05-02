@@ -294,6 +294,13 @@ this is the inner grid that holds the main article and sidebar
     font-size: 2rem;
 }
 
+.sidebar__img {
+    max-height:150px;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
 /* this wraps the sidebar title and items */
 .sidebar-wrap {
     /* position: sticky;
@@ -343,12 +350,12 @@ this is the inner grid that holds the main article and sidebar
 .item-info__p {
     line-height:initial;
     margin:.25em 0 0 0;
-    font-size:1.2rem;
+    font-size:1.4rem;
     
 }
 
 .item-info__h4 {
-    font-size:1.6rem;
+    font-size:1.8rem;
     color:var(--clr-highlight);
 }
 
@@ -656,10 +663,7 @@ i:hover {
        width:100%;
     }
 
-    .sidebar__item-info {
-        padding:.25em;
-        
-    }
+  
 
     .main__sidebar-wrap {
         width: 85%;
