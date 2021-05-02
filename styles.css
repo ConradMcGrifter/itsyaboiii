@@ -295,10 +295,15 @@ this is the inner grid that holds the main article and sidebar
 }
 
 .sidebar__img {
-    height: 150px;
+    height: 125px;
     width:100%;
-    
     object-fit: cover;
+    filter:grayscale(100%);
+    transition:.75s;
+}
+
+.sidebar__item:hover .sidebar__img {
+    filter:grayscale(0%);
 }
 
 .sidebar__blog-link {
@@ -348,12 +353,14 @@ this is the inner grid that holds the main article and sidebar
 }
 
 
-.sidebar__item:hover {
-   
-    border:solid 1px var(--clr-highlight);
+
+.sidebar__item:hover .sidebar__item-info {
+    
+    background:var(--clr-accent);
 }
 
 .sidebar__item-info {
+    transition:.5s;
     width:100%;
     min-height:75px;
     background:var(--clr-sidebar-info);
@@ -591,6 +598,12 @@ i:hover {
         font-size:1.6rem;
     }
 
+
+    /* this resets the grayscale so the images have color on mobile */
+    .sidebar__img {
+        filter:grayscale(0%);
+    }
+
     
 
    
@@ -821,8 +834,9 @@ i:hover {
  
     
     /* this makes it so the hover effect is canceled out for mobile */
-    .sidebar__item:hover {
-        border:solid 1px var(--clr-sidebar-info);
+    .sidebar__item:hover .sidebar__item-info {
+   
+        background:var(--clr-sidebar-info);
     }
     
     .sidebar__item-wrap {
