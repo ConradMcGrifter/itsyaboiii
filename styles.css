@@ -32,14 +32,7 @@
     --clr-overlay-gradient: linear-gradient(
         rgba(33, 33, 33,0),
         rgba(33, 33, 33, 0.842));
-    /* other color scheme */
-    /* --clr-primary: #bea0d3;
-    --clr-accent: #229ccc;
-    --clr-nav: #201925;
-    --clr-highlight: lightgoldenrodyellow;
-    --clr-links: #61baad;
-    --clr-content-bg: rgb(33, 33, 33);
-    --clr-background: rgb(15, 15, 15); */
+
 }
 
 .lightmode {
@@ -59,7 +52,7 @@
     --clr-sidebar-info:#1973977a;
     --clr-overlay-gradient: linear-gradient(
         rgba(255, 255, 255, 0),
-        rgba(255, 255, 255, 0.719));
+        rgba(255, 255, 255, 0.877));
 }
 
 html {
@@ -360,12 +353,21 @@ this is the inner grid that holds the main article and sidebar
 }
 
 .more-posts {
-    background:var(--clr-content-bg);
-    height:100px;
+    background:var(--clr-content-bg);    
     width:100%;
-   margin: 1em 0;
-   position:sticky;
-   top:1em;
+    margin: 1em 0;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    padding:.25em;
+    border-radius:5px;
+}
+
+.more-posts p {
+    margin:0;
+    font-style: italic;
+    font-size:1.4rem;
 }
 
 /* /////////////
