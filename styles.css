@@ -132,7 +132,7 @@ blockquote {
 .grid-container__header {
     /* background: var(--clr-background); */
     background: var(--linear-gradient), url("https://conradmcgrifter.github.io/itsyaboiii/images/carbonfiber.png");
-    /* background-size: cover; */
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -169,6 +169,9 @@ blockquote {
 .grid-container__footer {
     grid-area:footer;
     background: var(--clr-nav);
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 /*================================================================= 
@@ -554,11 +557,6 @@ this is the inner grid that holds the main article and sidebar
                                                 FOOTER
                                              /////////// */
 
-.grid-container__footer {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-}
 
 .footer__content {
     display: flex;
