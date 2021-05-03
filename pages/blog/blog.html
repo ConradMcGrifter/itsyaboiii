@@ -18,37 +18,68 @@
         <title>its yaboiii</title>
     </head>
     <body id="body">
+
+        <!-- page structure grid -->
         <section class="grid-container">
-            <div class="nav-wrap">
-                <i class="fas fa-bars fa-lg" id="hamburger"></i>
-                <nav class="sticky-nav" id="sticky-navbar">
-              
-                    <i class="fas fa-times fa-lg" id="close"></i>
-                    <ul class="navbar__ul" id="navbar__ul-desktop">
-                        <li class="nav__li theme">
-                            <i
-                                class="fas fa-adjust fa-md modeToggle"
-                                id="modeToggle"
-                            >
-                            </i>
-                        </li>
-                        <li class="nav__li">
-                            <a href="#">ABOUT</a>
-                        </li>
-                        <!-- <li class="nav__li">
-                            <a href="pages/404.html">DROPS</a>
-                        </li> -->
-                        <li class="nav__li">
-                            <a href="pages/404.html">COLLECTION</a>
-                        </li>
-                        <li class="nav__li">
-                            <a href="pages/404.html">CONTACT</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div id="darken"></div>
+
+                    <!-- header -->
+            <header class="grid-container__header" id="header">
+                <div class="header__logo" id="logo">
+                    <img src="../../images/iphone5noBG.png" alt="Yaboiii Logo" />
+                </div>
+            </header>
+            
+            <div class="grid-container__main-content">
+                <!-- nav -->
+                <div class="nav-wrap">
+                    <i class="fas fa-bars fa-lg" id="hamburger"></i>
+                    <nav class="sticky-nav" id="sticky-navbar">
+                
+                        <i class="fas fa-times fa-lg" id="close"></i>
+                        <ul class="navbar__ul" id="navbar__ul-desktop">
+                            <li class="nav__li theme">
+                                <i
+                                    class="fas fa-adjust fa-md modeToggle"
+                                    id="modeToggle"
+                                >
+                                </i>
+                            </li>
+                            <li class="nav__li">
+                                <a href="../../index.html">HOME</a>
+                            </li>
+                            <li class="nav__li">
+                                <a href="#">ABOUT</a>
+                            </li>
+                            <li class="nav__li">
+                                <a href="pages/404.html">COLLECTION</a>
+                            </li>
+                            <li class="nav__li">
+                                <a href="pages/404.html">CONTACT</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="darken"></div>
+                </div>
+
+                <!-- main content grid -->
+                <section class="blog-grid">
+
+                </section>
+            </div>
+            <div class="grid-container__footer">
+                <!-- footer -->
+                <div class="footer__content">
+                    <a href="https://www.instagram.com"
+                        ><i class="fab fa-instagram fa-2x"></i
+                    ></a>
+                    <a href="https://www.twitter.com"
+                        ><i class="fab fa-twitter fa-2x"></i
+                    ></a>
+                    <i class="fas fa-envelope fa-2x"></i>
+                </div>
             </div>
         </section>
-        <script src="script.js"></script>
+        <script src="../../navBar.js"></script>
+        <script src="../../theme.js"></script>
     </body>
 </html>
