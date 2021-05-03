@@ -593,12 +593,13 @@ i:hover {
     color: var(--clr-text);
     /* align-items: center; */
     padding: 0.5em;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     position:relative;
 
 }
 
 .blog-grid__item p {
+    font-size:1.4rem;
     margin: 0;
     color: var(--clr-accent);
 }
@@ -613,6 +614,11 @@ i:hover {
     left:0;
     filter:opacity(7%);
     z-index:0;
+    transition:.5s;
+}
+
+.blog-grid__item img:hover {
+    filter:opacity(25%);
 }
 
 
@@ -624,23 +630,7 @@ i:hover {
     width: 70%;
 }
 
-/* .blog-grid__item:nth-child(1) {
-    background: linear-gradient(rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.9)),
-        url("https://www.kicksologists.com/wp-content/uploads/2010/04/air-jordan-i.jpg");
-    background-size: cover;
-} */
 
-/* .blog-grid__item:nth-child(2) {
-    background: linear-gradient(rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.9)),
-        url("https://sneakerbardetroit.com/wp-content/uploads/2020/12/Nike-Dunk-Low-Spartan-Green-CW1590-102-Release-Date-4.jpg");
-    background-size: cover;
-} */
-
-/* .blog-grid__item:nth-child(3) {
-    background: linear-gradient(rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.9)),
-        url("https://cms-cdn.thesolesupplier.co.uk/2020/09/Jordan-4-Fire-Red-Front.jpg");
-    background-size: cover;
-} */
 
 /*////////////////  
                                             MEDIA QUERIES
