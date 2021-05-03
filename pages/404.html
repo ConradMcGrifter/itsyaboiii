@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="It's yaboiii blog and content" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <script
             src="https://kit.fontawesome.com/207165ede1.js"
@@ -13,78 +14,60 @@
             href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="../styles.css" />
-        <title>404</title>
+        <link rel="stylesheet" href="../../styles.css" />
+        <title>its yaboiii</title>
     </head>
     <body id="body">
-        <!-- i needed to make two seperate nav bars because it wouldnt behave the way i wanted it to. the desktop navbar is sticky
-            while the mobile navbar is fixed. in the long run this is probably a bad solution so I should try to make a better design in the future-->
-        <!-- mobile nav bar -->
-        <!-- <nav class="navbar" id="mobile-navbar">
-            <i class="fas fa-bars fa-2x" id="hamburger"></i>
-            <ul class="navbar__ul" id="navbar__ul-mobile">
-                <li class="nav__li theme" id="modeToggle">
-                    <i
-                        class="fas fa-adjust fa-lg modeToggle"
-                        id="modeToggleMobile"
-                    ></i>
-                </li>
-                <li class="nav__li"><a href="pages/404.html">BLOG</a></li>
-                <li class="nav__li"><a href="pages/404.html">DROPS</a></li>
-                <li class="nav__li"><a href="pages/404.html">COLLECTION</a></li>
-                <li class="nav__li"><a href="pages/404.html">CONTACT</a></li>
-            </ul>
-        </nav>
-        <div id="darken"></div> -->
-
-        <!-- grid -->
-        <div class="grid-container">
-            <!-- grid item 1 -->
-            <header class="grid-item-1 header" id="header">
-                <div class="header__logo">
-                    <img src="../images/iphone5noBG.png" alt="" id="logo" />
+        <!-- page structure grid -->
+        <section class="grid-container">
+            <!-- header -->
+            <header class="grid-container__header" id="header">
+                <div class="header__logo" id="logo">
+                    <img
+                        src="../../images/iphone5noBG.png"
+                        alt="Yaboiii Logo"
+                    />
                 </div>
             </header>
-            <!-- grid item 2 -->
-            <section class="grid-item-2 content" id="content">
-                <!-- desktop sticky nav bar -->
-                <nav class="navbar" id="sticky-navbar">
-                    <i class="fas fa-bars fa-2x" id="hamburger"></i>
-                    <ul class="navbar__ul" id="navbar__ul-desktop">
-                        <li class="nav__li theme">
-                            <i
-                                class="fas fa-adjust fa-md modeToggle"
-                                id="modeToggleDesktop"
-                            >
-                            </i>
-                        </li>
-                        <li class="nav__li">
-                            <a href="pages/404.html">ABOUT</a>
-                        </li>
-                        <li class="nav__li">
-                            <a href="pages/404.html">DROPS</a>
-                        </li>
-                        <li class="nav__li">
-                            <a href="pages/404.html">COLLECTION</a>
-                        </li>
-                        <li class="nav__li">
-                            <a href="pages/404.html">CONTACT</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div id="darken"></div>
+
+            <div class="grid-container__main-content">
+                <!-- nav -->
+                <div class="nav-wrap">
+                    <i class="fas fa-bars fa-lg" id="hamburger"></i>
+                    <nav class="sticky-nav" id="sticky-navbar">
+                        <i class="fas fa-times fa-lg" id="close"></i>
+                        <ul class="navbar__ul" id="navbar__ul-desktop">
+                            <li class="nav__li theme">
+                                <i
+                                    class="fas fa-adjust fa-md modeToggle"
+                                    id="modeToggle"
+                                >
+                                </i>
+                            </li>
+                            <li class="nav__li">
+                                <a href="../../index.html">HOME</a>
+                            </li>
+                            <li class="nav__li">
+                                <a href="#">ABOUT</a>
+                            </li>
+                            <li class="nav__li">
+                                <a href="pages/404.html">COLLECTION</a>
+                            </li>
+                            <li class="nav__li">
+                                <a href="pages/404.html">CONTACT</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="darken"></div>
+                </div>
+
                 <!-- content -->
                 <div class="error-message" id="error">
-                    <i
-                        style="color: rgb(248, 58, 0)"
-                        class="fas fa-undo fa-3x"
-                    ></i>
+                    <i class="fas fa-undo fa-3x"></i>
                     <a class="home" href="../index.html">return home</a>
                 </div>
-            </section>
-
-            <!-- grid item 3 -->
-            <section class="grid-item-3 footer" id="footer">
+            </div>
+            <div class="grid-container__footer">
                 <!-- footer -->
                 <div class="footer__content">
                     <a href="https://www.instagram.com"
@@ -95,23 +78,9 @@
                     ></a>
                     <i class="fas fa-envelope fa-2x"></i>
                 </div>
-            </section>
-        </div>
-        <!--grid container ends-->
-
-        <!-- this is so the javascript will work -->
-        <a style="display: none" href="#yaboiii" id="newest-post__button"
-            >Read more</a
-        >
-        <a href="#" id="backToTop">back to top</a>
-        <article
-            style="display: none"
-            class="newest-post"
-            id="newest-post"
-        ></article>
-        
-        <script src="../script.js"></script>
+            </div>
+        </section>
+        <script src="../../navBar.js"></script>
+        <script src="../../theme.js"></script>
     </body>
-
-    
 </html>
