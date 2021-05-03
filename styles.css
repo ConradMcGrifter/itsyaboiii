@@ -9,6 +9,8 @@
 
                                                                5) FOOTER
                                                                --------------
+                                                               6) BLOG PAGE
+                                                               --------------
                                                                media queries
 
                                                                animations
@@ -359,7 +361,7 @@ this is the inner grid that holds the main article and sidebar
     margin-top: 1em;
     display: flex;
     flex-direction: column;
-    border: solid 1px var(--clr-background);
+    border: solid 1px var(--clr-highlight);
     transition: 0.5s;
 }
 
