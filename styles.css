@@ -593,13 +593,28 @@ i:hover {
     color: var(--clr-text);
     /* align-items: center; */
     padding: 0.5em;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    position:relative;
+
 }
 
 .blog-grid__item p {
     margin: 0;
-    color: var(--clr-primary);
+    color: var(--clr-accent);
 }
+
+/* this makes the background images for the grid items faded */
+.blog-grid__item img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    position:absolute;
+    top:0;
+    left:0;
+    filter:opacity(7%);
+    z-index:0;
+}
+
 
 .all-blog-posts {
     margin-top: 1em;
@@ -613,15 +628,15 @@ i:hover {
     background: linear-gradient(rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.9)),
         url("https://www.kicksologists.com/wp-content/uploads/2010/04/air-jordan-i.jpg");
     background-size: cover;
-}
+} */
 
-.blog-grid__item:nth-child(2) {
+/* .blog-grid__item:nth-child(2) {
     background: linear-gradient(rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.9)),
         url("https://sneakerbardetroit.com/wp-content/uploads/2020/12/Nike-Dunk-Low-Spartan-Green-CW1590-102-Release-Date-4.jpg");
     background-size: cover;
-}
+} */
 
-.blog-grid__item:nth-child(3) {
+/* .blog-grid__item:nth-child(3) {
     background: linear-gradient(rgba(33, 33, 33, 0.9), rgba(33, 33, 33, 0.9)),
         url("https://cms-cdn.thesolesupplier.co.uk/2020/09/Jordan-4-Fire-Red-Front.jpg");
     background-size: cover;
@@ -879,7 +894,8 @@ i:hover {
         width: 90%;
         height: 100%;
         grid-gap: 1em;
-        padding: 0.1em;
+        padding: 0em;
+        margin-bottom:1em;
     }
 
     .blog-grid__item {
@@ -889,7 +905,12 @@ i:hover {
 
     /* this makes the header smaller for mobile screens */
     .grid-container {
-        grid-template-rows: 100px auto 100px;
+        grid-template-rows: 75px auto 100px;
+    }
+
+    /* this makes the logo smaller on mobile */
+    .header__logo {
+        width:75px;
     }
 
     /* this makes it so the hover effect is canceled out for mobile */
@@ -933,7 +954,7 @@ i:hover {
     }
 
     .grid-container__header {
-        background: var(--clr-nav);
+        background: var(--clr-sidebar-info);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
