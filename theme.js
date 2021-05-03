@@ -1,7 +1,5 @@
-
 const modeToggle = document.getElementById("modeToggle");
 const body = document.getElementById("body");
-
 
 let lightMode = localStorage.getItem("lightMode");
 const enableLightMode = () => {
@@ -28,5 +26,3 @@ modeToggle.addEventListener("click", () => {
         disableLightMode();
     }
 });
-
-

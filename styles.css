@@ -44,7 +44,7 @@
     --clr-highlight: rgb(34, 34, 34);
     --clr-links: #ffffff;
     --clr-content-bg: rgb(255, 255, 255);
-    --clr-background: rgb(206, 206, 206);
+    --clr-background: rgb(226, 226, 226);
     --clr-text: rgb(14, 14, 14);
     --linear-gradient: linear-gradient(
         rgba(50, 129, 161, 0.781),
@@ -588,41 +588,40 @@ i:hover {
 }
 
 .blog-grid__item {
-    background: var(--clr-content-bg);
+    background: var(--clr-background);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    border: solid 1px var(--clr-highlight);
+    /* justify-content: space-between; */
     color: var(--clr-text);
     /* align-items: center; */
     padding: 0.5em;
     font-size: 1.8rem;
-    position:relative;
-
+    position: relative;
 }
 
 .blog-grid__item p {
-    font-size:1.4rem;
+    font-size: 1.4rem;
     margin: 0;
-    color: var(--clr-accent);
+    color: var(--clr-links-hover);
 }
 
 /* this makes the background images for the grid items faded */
 .blog-grid__item img {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    position:absolute;
-    top:0;
-    left:0;
-    filter:opacity(7%);
-    z-index:0;
-    transition:.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: opacity(7%);
+    z-index: 0;
+    transition: 0.5s;
 }
 
-.blog-grid__item img:hover {
-    filter:opacity(25%);
+.blog-grid__item:hover img {
+    filter: opacity(35%);
 }
-
 
 .all-blog-posts {
     margin-top: 1em;
@@ -632,7 +631,17 @@ i:hover {
     width: 70%;
 }
 
+.blog-grid__item-info-wrap {
+    /* i put position relative and increased z index so the text will appear over the image */
+    position: relative;
+    z-index: 2;
+    transition: 0.25s;
+    padding: 0.5em;
+}
 
+.blog-grid__item:hover .blog-grid__item-info-wrap {
+    background: var(--clr-content-bg);
+}
 
 /*////////////////  
                                             MEDIA QUERIES
@@ -870,10 +879,13 @@ i:hover {
 }
 
 @media only screen and (max-width: 750px) {
-    
     /* this cancels out the hover effect of the blog grid items on mobile */
-    .blog-grid__item img:hover {
-        filter:opacity(7%);
+    .blog-grid__item:hover img {
+        filter: opacity(7%);
+    }
+
+    .blog-grid__item:hover .blog-grid__item-info-wrap {
+        background: none;
     }
 
     .all-blog-posts {
@@ -893,7 +905,7 @@ i:hover {
         height: 100%;
         grid-gap: 1em;
         padding: 0em;
-        margin-bottom:1em;
+        margin-bottom: 1em;
     }
 
     .blog-grid__item {
@@ -908,16 +920,16 @@ i:hover {
 
     /* this makes the logo smaller on mobile */
     .header__logo {
-        width:70px;
-        height:70px;
-        border-radius:999px;
-        background:var(--clr-content-bg); 
-        border:solid 2px var(--clr-accent) 
+        width: 70px;
+        height: 70px;
+        border-radius: 999px;
+        background: var(--clr-content-bg);
+        border: solid 2px var(--clr-accent);
     }
 
     .header__logo img {
-        height:80%;
-        width:80%;
+        height: 80%;
+        width: 80%;
     }
 
     /* this makes it so the hover effect is canceled out for mobile */
@@ -960,10 +972,8 @@ i:hover {
         margin: 0.5em;
     }
 
-
     .grid-container__header {
         background: var(--clr-background);
-
     }
 
     .title-wrap {
