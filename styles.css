@@ -562,7 +562,7 @@ this is the inner grid that holds the main article and sidebar
 i {
     color: var(--clr-links);
     /* transform: scale(200%); */
-    transition: 0.15s;
+    /* transition: 0.15s; */
 }
 
 i:hover {
@@ -603,7 +603,7 @@ i:hover {
 
 .all-blog-posts {
     margin-top: 1em;
-    margin-left: 2.5em;
+    margin-left: 3em;
     color: var(--clr-text);
     display: flex;
     width: 70%;
@@ -864,8 +864,8 @@ i:hover {
 
 @media only screen and (max-width: 750px) {
     .all-blog-posts {
-        margin-top: 1em;
-        margin-left: 1.5em;
+        margin: 1em 0 1em 0;
+        margin-left: 1em;
         width: 90%;
         align-items: center;
         justify-content: flex-start;
@@ -879,7 +879,7 @@ i:hover {
         width: 90%;
         height: 100%;
         grid-gap: 1em;
-        padding: 1em;
+        padding: 0.1em;
     }
 
     .blog-grid__item {
