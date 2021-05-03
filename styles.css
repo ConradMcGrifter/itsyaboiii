@@ -895,12 +895,21 @@ i:hover {
 
     /* this makes the header smaller for mobile screens */
     .grid-container {
-        grid-template-rows: 75px auto 100px;
+        grid-template-rows: 85px auto 100px;
     }
 
     /* this makes the logo smaller on mobile */
     .header__logo {
-        width:75px;
+        width:70px;
+        height:70px;
+        border-radius:999px;
+        background:var(--clr-content-bg); 
+        border:solid 2px var(--clr-accent) 
+    }
+
+    .header__logo img {
+        height:80%;
+        width:80%;
     }
 
     /* this makes it so the hover effect is canceled out for mobile */
@@ -943,12 +952,10 @@ i:hover {
         margin: 0.5em;
     }
 
+
     .grid-container__header {
-        background: var(--clr-sidebar-info);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
+        background: var(--clr-background);
+
     }
 
     .title-wrap {
