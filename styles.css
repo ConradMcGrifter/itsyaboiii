@@ -123,6 +123,9 @@ blockquote {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 125px auto 100px;
+    grid-template-areas: "header"
+                         "main"
+                         "footer"
 }
 /* header
 ------------------------------------------*/
@@ -136,11 +139,13 @@ blockquote {
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-area:header;
 }
 
 /* main content - this is the grid item / flex container that holds the navbar and grid for sidebar / main article 
 -----------------------------------------------------------------------------------*/
 .grid-container__main-content {
+    grid-area:main;
     background: var(--clr-background);
     width: 100%;
     display: flex;
@@ -162,6 +167,7 @@ blockquote {
 /* footer 
 --------------------------------------------*/
 .grid-container__footer {
+    grid-area:footer;
     background: var(--clr-nav);
 }
 
