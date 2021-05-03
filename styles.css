@@ -128,7 +128,7 @@ blockquote {
 ------------------------------------------*/
 .grid-container__header {
     /* background: var(--clr-background); */
-    background: var(--linear-gradient), url(/images/carbonfiber.png);
+    background: var(--linear-gradient), url("/images/carbonfiber.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
