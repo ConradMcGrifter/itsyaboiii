@@ -129,7 +129,7 @@ blockquote {
 .grid-container__header {
     /* background: var(--clr-background); */
     background: var(--linear-gradient), url("https://conradmcgrifter.github.io/itsyaboiii/images/carbonfiber.png");
-    background-size: cover;
+    /* background-size: cover; */
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -831,13 +831,6 @@ i:hover {
 
 @media only screen and (max-width: 750px) {
 
-    /* this makes the header background img a consistent size on mobile */
-    .grid-container__header {
-        /* background: var(--clr-background); */
-        background: var(--linear-gradient), url("https://conradmcgrifter.github.io/itsyaboiii/images/carbonfiber.png");
-        background-size: fill;
-    }
-    
     /* this makes it so the hover effect is canceled out for mobile */
     .sidebar__item:hover .sidebar__item-info {
    
