@@ -23,7 +23,7 @@ const newestPost = document.getElementById("newest-post");
 const footer = document.getElementById("footer");
 const errorBg = document.getElementById("error");
 // this is the icon to toggle the theme
-const modeToggle = document.getElementById("modeToggle");
+// const modeToggle = document.getElementById("modeToggle");
 
 //
 //                                   event listeners
