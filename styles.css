@@ -29,7 +29,7 @@
         rgba(15, 15, 15, 0.945),
         rgba(15, 15, 15, 0.705)
     );
-    --clr-links-hover: rgb(190, 0, 190);
+    --clr-links-hover: rgb(223, 0, 223);
     --clr-sidebar-info: #112f38;
     --clr-overlay-gradient: linear-gradient(
         rgba(33, 33, 33, 0),
@@ -50,7 +50,7 @@
         rgba(50, 129, 161, 0.781),
         rgba(50, 129, 161, 0.726)
     );
-    --clr-links-hover: rgb(114, 0, 114);
+    --clr-links-hover: rgb(141, 42, 141);
     --clr-sidebar-info: #1973977a;
     --clr-overlay-gradient: linear-gradient(
         rgba(255, 255, 255, 0),
