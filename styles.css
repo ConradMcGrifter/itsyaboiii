@@ -325,7 +325,7 @@ this is the inner grid that holds the main article and sidebar
     border: solid var(--clr-primary) 2px;
     border-radius: 999px;
     padding: 0.5em;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .sidebar__blog-link:hover {
@@ -868,6 +868,12 @@ i:hover {
 }
 
 @media only screen and (max-width: 750px) {
+    
+    /* this cancels out the hover effect of the blog grid items on mobile */
+    .blog-grid__item img:hover {
+        filter:opacity(7%);
+    }
+
     .all-blog-posts {
         margin: 1em 0 1em 0;
         margin-left: 1em;
