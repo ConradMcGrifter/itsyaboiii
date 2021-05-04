@@ -262,7 +262,7 @@ this is the inner grid that holds the main article and sidebar
 .navbar__ul {
     display: flex;
     width: 50%;
-    max-width: 500px;
+    max-width: 600px;
     justify-content: space-between;
     align-items: center;
     margin: 0.25em;
