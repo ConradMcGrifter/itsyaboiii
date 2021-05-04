@@ -625,7 +625,7 @@ i:hover {
 }
 
 .blog-grid__item:hover img {
-    filter: opacity(35%);
+    filter: opacity(45%);
 }
 
 .all-blog-posts {
