@@ -569,7 +569,7 @@ i {
 
 i:hover {
     /* transform: scale(230%); */
-    color: var(--clr-highlight);
+    color: var(--clr-links-hover);
 }
 
 /* 
@@ -577,7 +577,7 @@ i:hover {
                                            /////////////*/
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-auto-rows: 175px;
     /* background: white; */
     width: 70%;
