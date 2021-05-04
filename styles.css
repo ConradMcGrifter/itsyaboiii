@@ -305,6 +305,7 @@ this is the inner grid that holds the main article and sidebar
     text-align: center;
     /* padding: 1em 0 0 0; */
     font-size: 2rem;
+    text-decoration: underline;
 }
 
 .sidebar__img {
@@ -361,7 +362,7 @@ this is the inner grid that holds the main article and sidebar
     margin-top: 1em;
     display: flex;
     flex-direction: column;
-    border: solid 1px var(--clr-highlight);
+    border: solid 1px var(--clr-primary);
     transition: 0.5s;
 }
 
@@ -591,13 +592,17 @@ i:hover {
     background: var(--clr-background);
     display: flex;
     flex-direction: column;
-    border: solid 1px var(--clr-highlight);
+    border: solid 1px var(--clr-primary);
     /* justify-content: space-between; */
     color: var(--clr-text);
     /* align-items: center; */
     padding: 0.5em;
-    font-size: 1.8rem;
+
     position: relative;
+}
+
+.blog-grid__item h4 {
+    font-size: 2rem;
 }
 
 .blog-grid__item p {
@@ -949,7 +954,6 @@ i:hover {
 
     .sidebar__h3 {
         /* color:var(--clr-accent); */
-
         text-align: start;
         padding: 1em 0 0 0.75em;
     }
