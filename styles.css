@@ -918,9 +918,9 @@ i:hover {
         justify-content: space-evenly;
     }
 
-    /* this makes the header smaller for mobile screens */
+    /* this makes the header / footer smaller for mobile screens */
     .grid-container {
-        grid-template-rows: 85px auto 100px;
+        grid-template-rows: 90px auto 75px;
     }
 
     /* this makes the logo smaller on mobile */
@@ -929,7 +929,7 @@ i:hover {
         height: 70px;
         border-radius: 999px;
         background: var(--clr-content-bg);
-        border: solid 2px var(--clr-accent);
+        border: solid 1px var(--clr-accent);
     }
 
     .header__logo img {
