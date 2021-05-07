@@ -10,6 +10,7 @@
                                                                5) FOOTER
                                                                --------------
                                                                6) BLOG PAGE
+                                                                    a) single blog post
                                                                --------------
                                                                media queries
 
@@ -198,7 +199,7 @@ this is the inner grid that holds the main article and sidebar
 }
 
 /* ///////////
-                                                    HEADER
+                                                 1)  HEADER
                                                 ///////////// */
 
 .header__logo {
@@ -216,7 +217,7 @@ this is the inner grid that holds the main article and sidebar
 }
 
 /*////////// 
-                                                    navbar
+                                                 2)  navbar
                                                  //////////*/
 
 /* this provides a background place holder after the hamburger is clicked and the navbar moves */
@@ -287,7 +288,7 @@ this is the inner grid that holds the main article and sidebar
 }
 
 /* ///////////
-                                                   SIDEBAR
+                                                 3) SIDEBAR
                                                 ///////////*/
 
 /* GRID AREA - S --this is the grid area for the sidebar */
@@ -416,8 +417,8 @@ this is the inner grid that holds the main article and sidebar
 }
 
 /* /////////////
-                                                MAIN CONTENT
-                                              ////////////// */
+                                                4) MAIN CONTENT
+                                                 ////////////// */
 
 /* GRID AREA - A -- this is the container for the main article */
 .newest-post {
@@ -550,7 +551,7 @@ this is the inner grid that holds the main article and sidebar
 }
 
 /* //////////
-                                                FOOTER
+                                             5) FOOTER
                                              /////////// */
 
 .footer__content {
@@ -573,7 +574,7 @@ i:hover {
 }
 
 /* 
-                                              BLOG PAGE
+                                            6) BLOG PAGE
                                            /////////////*/
 .blog-grid {
     display: grid;
@@ -650,7 +651,7 @@ i:hover {
 } */
 
 /* 
-                                        single blog post 
+                                        a) single blog post 
                                         =================== */
 
 .blog-post__img {
@@ -689,17 +690,17 @@ i:hover {
 
 .link-wrap {
     display: flex;
-    width: 75%;
+    width: 100%;
     justify-content: space-between;
     margin: auto;
-    margin-top: 2em;
+    margin-top: 1em;
     padding: 1em;
 }
 
 .next-post,
 .previous-post {
     font-size: 1.8rem;
-    color: var(--clr-links);
+    color: var(--clr-accent);
 }
 
 /*////////////////  
@@ -947,6 +948,11 @@ i:hover {
 }
 
 @media only screen and (max-width: 750px) {
+    .link-wrap {
+        width: 100%;
+        padding: 1em 0;
+    }
+
     .blog-post--wrapper {
         width: 100%;
         margin: 0;
